@@ -51,10 +51,11 @@ echo $this->Html->css('admin_css/assets/plugins/jquery-easy-pie-chart/jquery.eas
                   <input class="form-control"  name="data[User][first_name]" id="first_name" type="text" value="<?php echo !empty($resultset['first_name']) ? $resultset['first_name'] : "";?>"/>
                 </div>
               </div> -->
-                  <?php echo $this->Form->input('confirmation_code', array('label'=>array('text'=>__('Confirmation Code')), 'value' => $site_settings['confirmation_code'], 'placeholder' => __('Confirmation Code'))); 
-
-                  ?>
-                  <?php echo $this->Form->input('business_user_name', array('label'=>array('text'=>__('Business User Name (Company)')), 'value' => $site_settings['business_user_name'], 'placeholder' => __('Business User Name(Company)'))); 
+                  <?php 
+                        echo $this->Form->input('confirmation_code', array('label'=>array('text'=>__('Confirmation Code')), 'value' => $site_settings['confirmation_code'], 'placeholder' => __('Confirmation Code'))); 
+                        echo $this->Form->input('business_user_name', array('label'=>array('text'=>__('Business User Name (Company)')), 'value' => $site_settings['business_user_name'], 'placeholder' => __('Business User Name(Company)'))); 
+                        
+                         echo $this->Form->input('allowed_questions', array('label'=>array('text'=>__('Questions Size Limit')), 'value' => $site_settings['allowed_questions'], 'placeholder' => __('Questions Size Limit'))); 
 
                   ?>
 					<?php echo $this->Form->submit(__('SAVE'), array(

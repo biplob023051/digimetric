@@ -97,6 +97,7 @@ class JobCandidatesController extends AppController {
 			 )
 		   )
 		);
+
         $this->set('tests', $tests_for_this_job);
 
         //debug($tests_for_this_job); 
@@ -169,11 +170,15 @@ class JobCandidatesController extends AppController {
                     )
                 )
         );
+
+        $site_settings = $this->_getSettings();
+
         $test_questions = $this->TestQuestion->find('all', array(
             'conditions' => array('TestQuestion.test_id' => $JobTest["CandidateTest"]["test_id"],
                 'TestQuestion.version' => $JobTest["CandidateTest"]["version"],
             ),
-            'order' => 'sort_order asc'
+            'order' => 'rand()',
+            'limit' => $site_settings['allowed_questions']
         ));
 
 		//debug($test_questions);
@@ -368,7 +373,7 @@ class JobCandidatesController extends AppController {
                 ),
                 'conditions' => array('JobCandidate.confirmation_code' => $site_settings['confirmation_code']),
                 'limit' => 10,
-                'order' => array('CandidateRanking.result DESC', 'CandidateRanking.created DESC'),
+                'order' => array('CandidateRanking.result DESC'),
                 'fields' => array('JobCandidate.*', 'CandidateRanking.*')                
             );
 

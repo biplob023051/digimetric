@@ -30,7 +30,7 @@
 
                                 </div>
                                 <hr size="1" color="#999999" width="100%"  />
-                                <div class="page-header"><h2><?php echo __('Test Rangkigs');?></h2></div>
+                                <div class="page-header"><h2><?php echo __('Test Ranking');?></h2></div>
                                 <div class="table-responsive">
                                     <table cellpadding="0" cellspacing="0"  class="table table-bordered">
                                         <thead>

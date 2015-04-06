@@ -67,7 +67,7 @@
 
 
                                             <div class="col-lg-6 descrivein ">
-                                                <p>No of Question : <?php echo $value['Test']['no_of_questions']; ?></p>
+                                                <p>No of Question : <?php echo $site_settings['allowed_questions']; ?></p>
                                                 <p>Question Types : Multiple Choice </p>
                                                 <p>Duration : 
                                                     <?php echo !empty($value['Test']['duration_hour']) ? $value['Test']['duration_hour']." Hour(s)" :''; ?>
