@@ -99,6 +99,14 @@
  <i class="fa fa-arrow-right"></i> <span class="title"> Test Takers  </span> <span class="arrow"> </span> </a>
           
         </li>
+         <li> 
+            <a href="<?php echo ADMIN_BASEURL; ?>job_candidates/event_test_takers">
+             <i class="fa fa-arrow-right"></i> <span class="title"><?php echo __('Event Test Takers'); ?></span> <span class="arrow"> </span> </a>
+        </li>
+        <li> 
+            <a href="<?php echo ADMIN_BASEURL; ?>settings/manage_settings">
+             <i class="fa fa-arrow-right"></i> <span class="title"><?php echo __('Settings'); ?></span> <span class="arrow"> </span> </a>
+        </li>
         	<!--<li> <a href="<?php echo ADMIN_BASEURL; ?>help"> <i class="fa fa-umbrella"></i> <span class="title"> Help & Support </span> <span class="arrow"> </span> </a>
        
         </li>-->

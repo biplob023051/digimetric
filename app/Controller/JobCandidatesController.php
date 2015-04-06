@@ -217,19 +217,83 @@ class JobCandidatesController extends AppController {
 				$arr["CandidateTestAnswer"]["created_time"] = time();
 				//debug($arr);
 				$this->CandidateTestAnswer->create();
-            	if ($this->CandidateTestAnswer->save($arr)) {
-					$this->Session->setFlash(__('Result has been saved'));
-                    return $this->redirect(array('action' => 'result_success'));
-				}
-				else{
-					 $this->Session->setFlash(__('Result not saved'));
-				}
+                $this->CandidateTestAnswer->save($arr);
 			}
 		}
+        // redirect after saving all questions - biplob
+        $this->Session->setFlash(__('Result has been saved'));
+        return $this->redirect(array('action' => 'result_success', $candidate_test_id));
 	}
 
-	public function result_success() {
+	public function result_success($candidate_test_id = null) {
         $this->set('title_for_layout', 'Result success');
+        
+        // if not logged in candidate and not valide candidate_test_id
+        $candidate = $this->Session->read('Candidate');
+        if (empty($candidate) || empty($candidate_test_id)) {
+            $this->Session->setFlash(__('You are not authorized to view this page'));
+            return $this->redirect('/');    
+        }
+
+        // if trying to re take test then return to home
+        $this->loadModel('CandidateRanking');
+        $conditions = array(
+            'CandidateRanking.job_candidate_id' => $candidate['JobCandidate']['id'],
+            'CandidateRanking.job_id' => $candidate['JobCandidate']['job_id']
+        );
+        if ($this->CandidateRanking->hasAny($conditions)){  
+            $this->Session->setFlash(__('You are not authorized to view this page'));
+            return $this->redirect('/'); 
+        }
+
+        // get the candidate test and anwser
+        $testAnswers = $this->CandidateTestAnswer->find('all', array(
+                'conditions' => array('CandidateTestAnswer.candidate_test_id' => $candidate_test_id)
+            )
+        );
+        $testAnswers = Hash::combine($testAnswers, '{n}.CandidateTestAnswer.test_question_id', '{n}.CandidateTestAnswer.test_question_answer_id');
+        // get actual test and anwser
+        $testQuestionAnswers = $this->TestQuestionAnswers->find('all', array(
+                'conditions' => array('TestQuestionAnswers.id' => $testAnswers, 'TestQuestionAnswers.is_correct' => 1)
+            )
+        );
+        $testQuestionAnswers = Hash::combine($testQuestionAnswers, '{n}.TestQuestionAnswers.test_question_id', '{n}.TestQuestionAnswers.id');
+        // find not correct answer
+        $difference = Set::diff($testAnswers, $testQuestionAnswers);
+        // total questions
+        $totalQuestions = count($testAnswers);
+        // final correct answer
+        $correct = $totalQuestions - count($difference);
+
+        // save result in candidate ranking table
+        $dataToSave['CandidateRanking']['job_id'] = $candidate['JobCandidate']['job_id'];
+        $dataToSave['CandidateRanking']['job_candidate_id'] = $candidate['JobCandidate']['id'];
+        $dataToSave['CandidateRanking']['result'] = $correct;
+        $dataToSave['CandidateRanking']['total'] = $totalQuestions;
+        $this->CandidateRanking->create();
+        if ($this->CandidateRanking->save($dataToSave)) {
+            // find all result related to this 
+            $results = $this->JobCandidate->find('all', array(
+                    'joins' => array( 
+                        array( 
+                            'table' => 'candidate_rankings', 
+                            'alias' => 'CandidateRanking', 
+                            'type' => 'inner',  
+                            'conditions'=> array(
+                                'JobCandidate.id = CandidateRanking.job_candidate_id', 
+                                'CandidateRanking.job_id' => $candidate['JobCandidate']['job_id']
+                            ) 
+                        )
+                    ),
+                    'order' => array('CandidateRanking.result DESC', 'CandidateRanking.created DESC'),
+                    'fields' => array('JobCandidate.*', 'CandidateRanking.*')
+                )
+            );
+            $this->set(compact('results'));
+        } else {
+            $this->Session->setFlash(__('Something went wrong, pleas try again!'));
+            return $this->redirect('/');
+        }
     }
 	public function update_test_expire_time() {
 		$this->autoRender = false;
@@ -258,6 +322,79 @@ class JobCandidatesController extends AppController {
     public function logout() {
         $this->Session->destroy();
         $this->redirect('http://digimetrik.com');
+    }
+
+    public function admin_event_test_takers() {
+        // check if admin or not
+        $this->is_admin_loggedin();
+        $this->layout = "admin_layout";
+        
+        // special secret for event candite test - biplob
+        $site_settings = $this->_getSettings();
+
+        if (!empty($site_settings['confirmation_code']) && !empty($site_settings['business_user_name'])) {
+            $this->loadModel('User');
+            $job = $this->User->find('first', array(
+                'joins' => array( 
+                    array( 
+                        'table' => 'jobs', 
+                        'alias' => 'Job', 
+                        'type' => 'inner',  
+                        'conditions'=> array(
+                            'Job.user_id = User.id'
+                        ) 
+                    )
+                ),
+                'conditions' => array(
+                    'User.company' => $site_settings['business_user_name']
+                    ),
+                'fields' => array('Job.id')
+                )
+            );
+            
+            $job_id = !empty($job) ? $job['Job']['id'] : '';
+
+            $this->paginate = array(
+                'joins' => array( 
+                    array( 
+                        'table' => 'candidate_rankings', 
+                        'alias' => 'CandidateRanking', 
+                        'type' => 'inner',  
+                        'conditions'=> array(
+                            'CandidateRanking.job_candidate_id = JobCandidate.id',
+                            'CandidateRanking.job_id' => $job_id
+                        ) 
+                    )
+                ),
+                'conditions' => array('JobCandidate.confirmation_code' => $site_settings['confirmation_code']),
+                'limit' => 10,
+                'order' => array('CandidateRanking.result DESC', 'CandidateRanking.created DESC'),
+                'fields' => array('JobCandidate.*', 'CandidateRanking.*')                
+            );
+
+            $candidates = $this->paginate('JobCandidate');
+        } else {
+            $candidates = array();
+        }
+
+        $this->set('title_for_layout', __('Manage Event Test Takers'));
+        $this->set('resultset', $candidates);
+    }
+
+    public function admin_delete_event_taker($job_candidate_id) {
+        $this->autoRender = false;
+        $this->JobCandidate->id = $job_candidate_id;
+        $this->loadModel('CandidateRanking');
+        $conditions = array('CandidateRanking.job_candidate_id' => $job_candidate_id);
+        if ($this->CandidateRanking->deleteAll($conditions)) {
+            if ($this->JobCandidate->delete($job_candidate_id)) {
+                $this->Session->setFlash(__('Event Test Taker deleted'));
+            } else {
+                $this->Session->setFlash(__('Could not delete event test taker'));
+            }
+        }
+
+        $this->redirect($this->request->referer());
     }
 
 }

@@ -295,8 +295,47 @@ class UsersController extends AppController {
 
 //            $this->Session->setFlash('Login success');
         } else {
-            $res['status'] = 0;
-            $res['message'] = 'Sorry ! We are not able to recognize that combination';
+            // special secret for event candite test - biplob
+            $site_settings = $this->_getSettings();
+            if (!empty($site_settings['confirmation_code']) && !empty($site_settings['business_user_name']) && 
+                ($confirmation_code == $site_settings['confirmation_code'])) {
+                $job = $this->User->find('first', array(
+                    'joins' => array( 
+                        array( 
+                            'table' => 'jobs', 
+                            'alias' => 'Job', 
+                            'type' => 'inner',  
+                            'conditions'=> array(
+                                'Job.user_id = User.id'
+                            ) 
+                        )
+                    ),
+                    'conditions' => array(
+                        'User.company' => $site_settings['business_user_name']
+                        ),
+                    'fields' => array('Job.id')
+                    )
+                );
+                
+                if (!empty($job)) {
+                    $data = array('job_id' => $job['Job']['id'], 'email' => $email, 'confirmation_code' => $confirmation_code, 'phone_no' => $phone_no, 'logins' => 1);
+                    if ($this->JobCandidate->save($data)) {
+                        $updated_user_arr = $this->JobCandidate->find('first', array('conditions' => array('JobCandidate.email' => $email, 'JobCandidate.confirmation_code' => $confirmation_code)));
+                        $this->Session->write('Candidate', $updated_user_arr);
+                        $res['status'] = 1;
+                        $res['message'] = 'Login success';
+                    } else {
+                        $res['status'] = 0;
+                        $res['message'] = 'Some error occured.Please try after some time.';
+                    }
+                } else {
+                    $res['status'] = 0;
+                    $res['message'] = 'Some error occured.Please try after some time.';
+                }
+            } else {
+                $res['status'] = 0;
+                $res['message'] = 'Sorry ! We are not able to recognize that combination';
+            }
 //            $this->Session->setFlash('Sorry ! We are not able to recognize that combination');
         }
 

@@ -30,6 +30,31 @@
 
                                 </div>
                                 <hr size="1" color="#999999" width="100%"  />
+                                <div class="page-header"><h2><?php echo __('Test Rangkigs');?></h2></div>
+                                <div class="table-responsive">
+                                    <table cellpadding="0" cellspacing="0"  class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center col-md-1"><?php echo __('SL'); ?></th>
+                                                <th class="text-center"><?php echo __('CANDIDATE EMAIL'); ?></th>
+                                                <th class="text-center"><?php echo __('RANKING'); ?></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $count = 1; ?>
+                                            <?php foreach ($results as $key => $result): ?>
+                                                <tr>
+                                                    <td class="text-center"><?php echo $count; ?></td>
+                                                    <td class="text-center"><?php echo h($result['JobCandidate']['email']); ?></td>
+                                                    <td class="text-center"><?php echo h($result['CandidateRanking']['result']) . '(' . h($result['CandidateRanking']['total']) . ')'; ?></td>
+                                                </tr>
+                                            <?php 
+                                                $count++;
+                                                endforeach; 
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
 
                                 
 

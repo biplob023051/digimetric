@@ -59,7 +59,7 @@
                             <div class="container ">
                                 <div class="row descrive">
                                     <div class="col-lg-6">
-                                        <div class="left"><h3 class="mtop ">Question No.<span id="qus_no">1</span> to <?php echo count($test_questions); ?></h3> </div>
+                                        <div class="left"><h3 class="mtop ">Question No.<span style="display:inline;" id="qus_no">1</span> to <?php echo count($test_questions); ?></h3> </div>
                                     </div>
                                     <div class="col-lg-6"><div class="right">
                                             <div class="row"><div class="timedetail "> Total Time : <?php echo $test_info[0]["Test"]["duration_hour"] ?>(hrs) <?php echo $test_info[0]["Test"]["duration_mins"]; ?>(mins.) <?php echo $test_info[0]["Test"]["duration_secs"]; ?>(secs.) </div> </div>

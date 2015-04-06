@@ -33,6 +33,13 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
 	//public $helpers = array('Ck');
+
+    public function beforeFilter() {
+        // get the global settings
+        $site_settings = $this->_getSettings();
+        $this->set(compact('site_settings'));
+    }
+
     function is_admin_loggedin() {
         // if the admin session hasn't been set
         if (!$this->Session->check('Admin')) {
@@ -120,5 +127,15 @@ class AppController extends Controller {
 		//debug($all);die;
         return $all;
         
+    }
+
+    /**
+     * Get global site settings
+     * @return array
+     */
+    public function _getSettings() {
+        $this->loadModel('Setting');
+        $settings = $this->Setting->find('list', array('fields' => array('field', 'value')));
+        return $settings;
     }
 }
