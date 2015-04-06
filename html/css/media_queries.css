@@ -1,0 +1,153 @@
+@media only screen and (max-width: 959px) {
+}
+@media (min-width: 992px) {
+/*body.boxed #main-wrapper {
+	max-width: 1030px
+}*/
+#toggle-icon {
+	display: none;
+}
+.pull-right.navbar .nav>li>a {
+	padding: 15px 11px;
+}
+.fullwidthbanner {
+	height: 500px!important;
+}
+}
+@media (min-width: 1200px) {
+/*body.boxed #main-wrapper {
+	max-width: 1130px
+}*/
+#toggle-icon {
+	display: none;
+}
+.fullwidthbanner {
+	height: 500px!important;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+body.boxed #main-wrapper {
+	max-width: 810px;
+}
+#toggle-icon {
+	display: none;
+}
+}
+@media only screen and (max-width: 767px) {
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.ls-wrapper .ls-select-box select {
+	margin:4px 0px;
+}
+.profile-name h2 {
+	font-size: 40px;
+}
+.profile-name h2 span {
+	font-size: 15px;
+}
+.porfile-img {
+	padding: 10px 0 40px;
+}
+.social_icons ul li a {
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+#profile-toggle {
+	display: none;
+}
+#toggle-icon {
+	border-bottom: 1px solid #EBEBEB;
+	padding: 15px;
+	text-align: center;
+}
+#toggle-icon span:hover {
+	background: #FFF;
+}
+#toggle-icon span {
+	cursor: pointer;
+	border-radius: 3px;
+	background: #E14A3A;
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+	position: relative;
+}
+#toggle-icon span:before {
+	content: "\f039";
+	color: #FFF;
+	font-family: 'FontAwesome';
+	position: absolute;
+	top: 6px;
+	left: 13px;
+}
+#toggle-icon span:hover:before {
+	color: #E14A3A;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*body.boxed #main-wrapper {
+	max-width: 460px;
+}*/
+.styleswitcher {
+	display: none;
+}
+}
+@media only screen and (max-width: 479px) {
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body.boxed #main-wrapper {
+	max-width: 340px;
+}
+.styleswitcher {
+	display: none;
+}
+.resume-btn a {
+	padding: 15px 23px;
+}
+
+}
+
+@media only screen and (max-width:1178px) {
+
+.spicy {
+width: 100%;}
+.jobs_label{display: block; width: 100%;}
+.main_box {width: 90% !important;
+margin: 18px auto !important;}
+.main_boxa { margin-bottom:10px;}
+.after_c {
+font-size: 17px;}
+.theme_bg {
+font-size: 12px;}
+.spicy {width: 92% !important;
+float: left;
+margin: 9px 4%;}
+}
+
+@media only screen and (max-width:768px) {
+
+.jobs_label{display: block;}
+.main_box {
+
+width: 94%;
+margin: 13px;
+}
+.main_boxa { margin-bottom:10px;}
+.after_c {
+font-size: 17px;}
+.theme_bg {
+font-size: 12px;}
+}

@@ -1,0 +1,417 @@
+/*responsive.css*/
+
+@media (max-width:1200px) {
+
+.m_content { width: 90%;
+left: 0px;
+}
+.main_box {
+width:18%;float: left;height: 310px;
+}
+
+.margtt img{ margin:10px 0px;}
+.m_content  .col-md-6 { width:90%;}
+}
+@media (max-width:1050px) {
+.after_c {
+width: 100% !important;}
+
+.margtt .main_box {
+width:25%;float: left;height: 310px;
+}
+.job_table table {
+width: 100%;
+}
+.margtt img{ margin:10px 0px;}
+
+.main_box {
+
+width: 99.3%;
+margin: 0px;
+float: none !important;
+}
+.ftxt {
+font-size: 14px;}
+.tb2 {
+width: 100% !important;
+}
+.mstd {
+width: 100% !important;}
+.home {background: url("../img/small.png") no-repeat; background-size: 100% 100%; height: 420px}
+.logs {
+z-index: 9999;
+float: right;
+padding: 5px 0px;
+}
+.logo{ height:40px !important; }
+.newnav {min-height: 50px;
+padding: 10px 0px;
+}
+.ghd {
+height: 90px; margin-top: 111px;}
+.flex-control-nav {
+
+top: 106px;
+}
+.ghd  h1{
+font-size: 18px;
+line-height: 31px;
+
+}
+.flex-control-nav li {
+margin: 0px 6px;}
+.red span {
+display: block;
+font-size: 14px;}
+
+.experience p {
+line-height: 25px;
+font-size: 13px;
+}
+.orange span {
+font-size: 20px;}
+.form.rollIn.animated {
+width: 100%;
+}
+.cani h1{ font-size:12px !important;  padding:0px 5px}
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+
+height: 100px;}
+.parallax-main-banner h1, .video #heading h1 {
+
+line-height: 37px;}
+.find h1 {
+line-height: 80px !important; font-size:15px;
+}
+.parallax-main-banner h1, .video #heading h1 {
+font-size: 16px;
+}
+.parallax-main-banner {
+border-top: 1px solid #ff7200;
+border-bottom: 1px solid #ff7200;
+border-left: none;
+border-right: none;
+background-attachment: fixed;
+background-size: cover;
+text-align: center;
+position: relative;
+height: 291px;
+padding: 11% 0px;
+}
+
+.blogu .ghd {
+height: 52px;
+}
+
+.list li a {
+font-size: 17px; padding: 0px 15px;}
+
+
+}
+
+@media (max-width:1170px) {
+
+.m_content { width: 96%; padding: 0px;
+margin: 0px;
+}
+.jobs_label{display: block;}
+}
+@media (max-width:767px) {
+.subsit .col-lg-2 {
+width: 100%;
+}
+.form_subsi table tr td:first-child {
+text-align: left;}
+.form_subsi .col-lg-4.col-sm-4 {
+width: 40%;
+float: left;
+}
+.btn-proceed {
+font-weight: bold;
+text-transform: uppercase;
+color: #fff;
+background: #ff7f01 !important;
+padding: 13px 13px;
+text-align: center;
+margin: 10px 0px !important;
+display: block;
+border: none;
+}
+
+
+
+
+
+
+
+
+
+
+.main_boxa {
+width: 90%;
+}
+
+.job_table table tr td {
+padding: 10px 0px; display:block; float:none; width:100%;
+}
+.timsa {
+width: 100% !important;
+margin-bottom: 10px;}
+
+.margtt .main_box {
+width:97%;float: left;height: 310px;
+}
+.devices  img{ width:100%;}
+.my_nav li {
+
+font-size: 15px; padding: 14px 5px;}
+
+
+
+.list{display:none;
+position: absolute;
+width: 100%;
+background: rgba(0, 0, 0, 0.63);
+padding: 0px;
+margin: 0px;
+top: 60px;
+left: 0px;z-index: 9999999999;}
+.toogimg {
+display:block;}
+.list li{display:block; float:none;
+}
+.list li a {
+padding: 2px 15px;}
+.list li a:hover {
+color: #FDFDFD;
+background: #ff7200;
+}
+
+
+.red span {
+display: block;
+font-size: 14px;}
+
+.experience p {
+line-height: 25px;
+font-size: 13px;
+}
+.orange span {
+font-size: 20px;}
+.form.rollIn.animated {
+width: 100%;
+}
+
+.cani h1{ font-size:12px !important;  padding:0px 5px}
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+
+height: 100px;}
+.parallax-main-banner h1, .video #heading h1 {
+
+line-height: 37px;}
+.find h1 {
+line-height: 80px !important; font-size:15px;
+}
+.parallax-main-banner h1, .video #heading h1 {
+font-size: 16px;
+}
+
+.navbar-default .navbar-nav > li > a {
+line-height: 0px;
+}
+.navbar-default .navbar-nav > li > a {
+line-height: 0px;text-align: center;
+}
+.selectBox-dropdown {
+width: 131px !important;
+padding: 0px 5px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+background-color: white;
+}
+.navbar-default .navbar-nav > li > a{ display:block;}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+background-color: white;display: block;
+}
+
+.tit_blog {
+font-size: 22px;}
+.par_blog {
+font-family: 'FuturaStd-Book';
+font-size: 18px;}
+.sbpar_blog{font-size: 18px;}
+.parallax-main-banner {
+border-top: 1px solid #ff7200;
+border-bottom: 1px solid #ff7200;
+border-left: none;
+border-right: none;
+background-attachment: fixed;
+background-size: cover;
+text-align: center;
+position: relative;
+height: 236px;
+padding: 11% 0px;
+}
+.outer_br span{ display:block;}
+.jobs_icon {
+
+}
+}
+
+@media (max-width:481px) {
+
+
+.home{ background: url("../img/tosmal.png") no-repeat;background-size: 100% 100%; }
+	.selectBox-dropdown {
+font-size: 20px;}
+	.logs li {
+    font-size: 20px;}
+
+.flexslider {
+min-height: 128px;
+}
+section{padding:10px 0px;}
+.ghd {
+width: 85%;
+}
+
+.bot {
+top: 330px;
+}
+.red span {
+display: block;
+font-size: 14px;}
+
+.experience p {
+line-height: 25px;
+font-size: 13px;
+}
+.orange span {
+font-size: 20px;}
+.form.rollIn.animated {
+width: 100%;
+}
+
+.cani h1{ font-size:12px !important;  padding:0px 5px}
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+margin-top: 10%;
+height: 100px;}
+.parallax-main-banner h1, .video #heading h1 {
+
+line-height: 37px;}
+.find h1 {
+line-height: 80px !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+line-height: 0px;text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a{ display:block;}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+background-color: white;display: block;
+}
+
+.navbar-brand img {height: 40px !important;
+}
+.navbar-toggle {
+margin-top: 0px;}
+.navbar-default {
+min-height: 74px !important;
+}
+.flex-control-nav {
+
+right: 0px;
+}
+.margtt .main_box {
+width:96%;float: left;height: 310px;
+}
+}
+
+
+
+
+
+
+@media (max-width:320px) {
+.margtt .main_box {
+width:96%;float: left;height: 310px;
+}
+.home{ background: url("../img/tosmal.png") no-repeat;background-size: 100% 100%; }
+	
+	.selectBox-dropdown {
+font-size: 20px;}
+	.logs li {
+    font-size: 20px;}
+.blogu .ghd {
+height: 52px;
+margin-top: 34px;
+}
+.flexslider {
+min-height: 128px;
+}
+section{padding:10px 0px;}
+.ghd {
+width: 85%;
+}
+
+.bot {
+top: 330px;
+}
+.red span {
+display: block;
+font-size: 14px;}
+
+.experience p {
+line-height: 25px;
+font-size: 13px;
+}
+.orange span {
+font-size: 20px;}
+.form.rollIn.animated {
+width: 100%;
+}
+
+.cani h1{ font-size:12px !important;  padding:0px 5px}
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+margin-top: 10%;
+height: 100px;}
+.parallax-main-banner h1, .video #heading h1 {
+
+line-height: 37px;}
+.find h1 {
+line-height: 80px !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+line-height: 0px;text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a{ display:block;}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+background-color: white;display: block;
+}
+
+.navbar-brand img {height: 40px !important;
+}
+.navbar-toggle {
+margin-top: 0px;}
+.navbar-default {
+min-height: 74px !important;
+}
+.flex-control-nav {
+
+right: 0px;
+}
+}
+
+/*modified*/
+
+@media (min-width:1000px )
+{
+	.s_margl
+	{
+		
+		margin-right: 35px;
+	}
+}

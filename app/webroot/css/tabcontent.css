@@ -1,0 +1,54 @@
+/* Tab Content - menucool.com */
+@font-face {
+ font-family:"lucida_fax_regul";
+ src:url(../fonts/lucida_fax_regul.ttf) format("truetype");
+}
+ul.tabs
+{  /*set to left, center, or right to align the tabs as desired*/
+}
+        
+ul.tabs li
+{ float:left;
+    margin: 0;
+    margin-right:3px; /*distance between tabs*/
+}
+ ul.tabs li:last-child{ margin:0px;}       
+ul.tabs li a
+{
+    font-size:20px;
+font-family: "lucida_fax_regul";
+color: #ffffff;
+line-height: 40px;
+ background:#e98293; display:block; width:141.5px; text-align:center;border-radius: 4px 4px 0px 0px;
+}
+        
+ul.tabs li a:visited
+{
+    color: #000;
+}
+        
+ul.tabs li a:hover
+{
+    background:#6b3f85 ;
+}
+        
+ul.tabs li.selected a, ul.tabs li.selected a:hover
+{
+    position: relative;
+    top: 0px;
+    background: #6b3f85;
+}
+        
+        
+ul.tabs li.selected a:hover
+{
+    text-decoration: none;
+}
+     
+
+div.tabcontents
+{margin-top: 40px;
+ padding: 15px;
+ background:#e5e5e5;
+  border-top:6px solid #6b3f85;
+}
