@@ -22,7 +22,7 @@
                             <div class="container ">
                                 <div class="row descrive">
                                     <div class="col-lg-6">
-                                        <div class="left"><h3 class="mtop ">Your result has beed successfully submitted</h3> </div>
+                                        <div class="left"><h3 class="mtop ">Your result has been successfully submitted</h3> </div>
                                        <div class="left"><h3 class="mtop "><a href="<?php echo BASEURL;?>/">Go back to account</a></h3> </div>
 
                                     </div>
@@ -35,9 +35,9 @@
                                     <table cellpadding="0" cellspacing="0"  class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th class="text-center col-md-1"><?php echo __('SL'); ?></th>
+                                                <th class="text-center col-md-1"><?php echo __('RANKING'); ?></th>
                                                 <th class="text-center"><?php echo __('CANDIDATE EMAIL'); ?></th>
-                                                <th class="text-center"><?php echo __('RANKING'); ?></th>
+                                                <th class="text-center"><?php echo __('SCORE'); ?></th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -255,6 +255,9 @@ class UsersController extends AppController {
 
         $this->autoRender = false;
 
+        if ($this->Session->check('Candidate'))
+        $this->Session->delete('Candidate');
+
         $email = $this->request->data['email'];
         $confirmation_code = $this->request->data['confirmation_code'];
         $phone_no = $this->request->data['phone_no'];

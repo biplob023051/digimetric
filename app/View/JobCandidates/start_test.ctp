@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-lg-6"><div class="right">
                                             <div class="row"><div class="timedetail "> Total Time : <?php echo $test_info[0]["Test"]["duration_hour"] ?>(hrs) <?php echo $test_info[0]["Test"]["duration_mins"]; ?>(mins.) <?php echo $test_info[0]["Test"]["duration_secs"]; ?>(secs.) </div> </div>
-                                            <div class="row"><div class="timedetail "> Remaining Time : <span data-time="<?php echo!empty($start_timer) ? $start_timer : ""; ?>" class="kkcountdown-1"></span> </div> </div>
+                                            <div class="row"><div class="timedetail "> Remaining Time : <span data-time="<?php echo !empty($start_timer) ? $start_timer : ""; ?>" class="kkcountdown-1"></span> </div> </div>
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -213,6 +213,10 @@ $('.cont').addClass('hide');
 $('div .cont:nth-last-child(1)').addClass('finish');
 $('#question_1').removeClass('hide');
 
+var hours_old = <?php echo $test_info[0]["Test"]["duration_hour"] ?>;
+var mins_old = <?php echo $test_info[0]["Test"]["duration_mins"] ?>;
+var secs_old = <?php echo $test_info[0]["Test"]["duration_secs"] ?>;
+var test_id = <?php echo $this->params['url']["test_id"]; ?>;
 
 var total_questions = $('.cont').length;
 if(total_questions==1){
@@ -221,6 +225,13 @@ if(total_questions==1){
 	if(chk){
 		$("#next").text('Finish').removeClass('next');
 		$(document).on('click','#next',function(){
+            var spent_hours = hours_old - $('.kkc-hours').text();
+            var spent_mins = mins_old - $('.kkc-min').text();
+            var spent_secs = secs_old - $('.kkc-sec').text();
+             $('#question_form').append('<input type="hidden" name="data[Time][hours]" value="'+spent_hours+'" />');
+             $('#question_form').append('<input type="hidden" name="data[Time][mins]" value="'+spent_mins+'" />');
+             $('#question_form').append('<input type="hidden" name="data[Time][secs]" value="'+spent_secs+'" />');   
+             $('#question_form').append('<input type="hidden" name="data[Time][test_id]" value="'+test_id+'" />');
 			 $("#question_form").submit();
 		});
 	}
@@ -233,7 +244,14 @@ if(total_questions==1){
 	 var is_class = $("#question_"+i).hasClass('finish');
 	 if(is_class == true){
 		  //$("#next").attr('type',"submit").text('Finish');
-		 $("#question_form").submit();
+		    var spent_hours = hours_old - $('.kkc-hours').text();
+            var spent_mins = mins_old - $('.kkc-min').text();
+            var spent_secs = secs_old - $('.kkc-sec').text();
+             $('#question_form').append('<input type="hidden" name="data[Time][hours]" value="'+spent_hours+'" />');
+             $('#question_form').append('<input type="hidden" name="data[Time][mins]" value="'+spent_mins+'" />');
+             $('#question_form').append('<input type="hidden" name="data[Time][secs]" value="'+spent_secs+'" />');
+             $('#question_form').append('<input type="hidden" name="data[Time][test_id]" value="'+test_id+'" />');   
+             $("#question_form").submit();
 	 }
 	 else{
 		 $("#qus_no").text(i+1);
