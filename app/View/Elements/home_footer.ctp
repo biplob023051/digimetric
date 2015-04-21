@@ -87,6 +87,14 @@
                 $('body').removeClass('loading');
             }
         });
+
+        $('.flexslider2').flexslider({
+            animation: "slide",
+            directionNav: false,
+            start: function(slider) {
+                $('body').removeClass('loading');
+            }
+        });
     });
 </script>
 <script src="<?php echo BASEURL; ?>/js/site.js" type="text/javascript"></script>    

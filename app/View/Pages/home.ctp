@@ -52,7 +52,7 @@ App::uses('Debugger', 'Utility');
                     <iframe width="100%" height="463" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/ujjjBdFFEmE?list=UU_ZYo8S9i9vc-6OJSzpSrSg&amp;rel=0"></iframe>
                 </div>
                 <div id="vid_shadow">
-                    <!--<img alt="" class="img-responsive" src="<?php //echo BASEURL;     ?>/img/vid_shadow.png"/>-->
+                    <!--<img alt="" class="img-responsive" src="<?php //echo BASEURL;           ?>/img/vid_shadow.png"/>-->
                 </div>
             </div>            
         </div>
@@ -91,7 +91,7 @@ App::uses('Debugger', 'Utility');
     <section id="get_started" class="big_bg">
         <div class="container text-center">
             <h1 class="title_txt bounceIn animated" dat-delay="100">Digimetrik provides customizable knowledge assessment tests in Science, Engineering,and Technology.</h1>
-            <a href="#" class="btn btn_orange btn_roll  btn_gs">Get Started</a>
+            <a href="#" class="btn btn_orange   btn_gs">Get Started</a>
         </div>
     </section>
 
@@ -126,7 +126,7 @@ App::uses('Debugger', 'Utility');
     <section id="create_account" class="big_bg">
         <div class="container text-center">
             <h1 class="title_txt bounceIn animated" dat-delay="100">Our Talent Analytics Dashboard identifies the best candidates in real-time.</h1>
-            <a href="#" class="btn btn_orange btn_roll btn_ca">Create Account</a>
+            <a href="#" class="btn btn_orange  btn_ca">Create Account</a>
         </div>
     </section>
 
@@ -159,6 +159,76 @@ App::uses('Debugger', 'Utility');
         <div class="container ">            
             <div class="text-center sec_text">
                 <h2 class="sec_heading">From The Words Of Our Clients</h2>
+            </div>
+            <div id="client_blog" style="position: relative;">
+                <div class="flexslider2">
+                    <ul class="slides">   
+                        <li class="text-center clearfix">
+                            <div class="col-xs-12 col-sm-6 col-md-6 txt_slide_div pull-left">
+                                <div class="bg_white cslider_txt">
+                                    "Very easy to use. I'm good to go. 
+                                    Thanks guys, keep up the good work!
+                                    Best regards!"
+                                </div>
+                                <div class="cslider_user clearfix">
+                                    <div class="col-xs-4 col-sm-4 cslider_user_img pull-left">
+                                        <img alt="" class="img-responsive" src="<?php echo BASEURL; ?>/img/user_kr.png"/>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 cslider_user_info pull-left">
+                                        <strong class="uname_f20">Keanu Reeves</strong>
+                                        <p>Company Name and Location</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 txt_slide_div pull-right">
+                                <div class="bg_white cslider_txt">
+                                    "I am completely blown away. Thank you for making it painless, pleasant and most of all hassle free!"
+                                </div>
+                                <div class="cslider_user">
+                                    <div class="col-xs-4 col-sm-4 cslider_user_img pull-left">
+                                        <img alt="" class="img-responsive" src="<?php echo BASEURL; ?>/img/user_eve.png"/>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 cslider_user_info pull-left">
+                                        <strong class="uname_f20">Eva Mendes</strong>
+                                        <p>Company Name and Location</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                                   
+                        <li class="text-center clearfix">
+                            <div class="col-xs-12 col-sm-6 col-md-6 txt_slide_div pull-left">
+                                <div class="bg_white cslider_txt">
+                                    "Very easy to use. I'm good to go. 
+                                    Thanks guys, keep up the good work!
+                                    Best regards!"
+                                </div>
+                                <div class="cslider_user clearfix">
+                                    <div class="col-xs-4 col-sm-4 cslider_user_img pull-left">
+                                        <img alt="" class="img-responsive" src="<?php echo BASEURL; ?>/img/user_kr.png"/>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 cslider_user_info pull-left">
+                                        <strong class="uname_f20">Keanu Reeves</strong>
+                                        <p>Company Name and Location</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 txt_slide_div pull-right">
+                                <div class="bg_white cslider_txt">
+                                    "I am completely blown away. Thank you for making it painless, pleasant and most of all hassle free!"
+                                </div>
+                                <div class="cslider_user">
+                                    <div class="col-xs-4 col-sm-4 cslider_user_img pull-left">
+                                        <img alt="" class="img-responsive" src="<?php echo BASEURL; ?>/img/user_eve.png"/>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 cslider_user_info pull-left">
+                                        <strong class="uname_f20">Eva Mendes</strong>
+                                        <p>Company Name and Location</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                                   
+                    </ul>
+                </div>
             </div>
         </div>
     </section>

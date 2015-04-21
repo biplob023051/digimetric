@@ -137,12 +137,12 @@ ul,ol{list-style-type: none;}
 .btn_hs:after {
     content: 'Hire Smarter';
 }
-.btn_gs:after {
+/*.btn_gs:after {
     content: 'Get Started';
 }
 .btn_ca:after {
     content: 'Create Account';
-}
+}*/
 .btn_roll:after {
     top: -98%;
     background: #FFFFFF;
@@ -384,6 +384,128 @@ li.text-center .btn_orange, .big_bg .btn_orange{
     transition: margin-right 300ms linear;
 }
 
+#client_blog{
+    padding: 40px 0 0;
+}
+.flexslider2{
+    overflow: hidden;
+}
+.flexslider2 > .flex-viewport > .slides > li{
+    padding-top: 20px;
+}
+.txt_slide_div{
+    width: 45%;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfontba72.eot?v=4.0.3');
+    src: url('../fonts/fontawesome-webfontd41d.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfontba72.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfontba72.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfontba72.svg?v=4.0.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cslider_txt{
+    border: 1px solid #ccc;
+    color: #808080;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 16px;
+    padding: 60px 40px;
+    position: relative;
+    text-align: center;
+}
+.cslider_txt:before{
+    background: none repeat scroll 0 0 #eef2f5;
+    border-bottom: 1px solid #ccc;
+    border-radius: 50%;
+    color: #ff8100;
+    content: "";
+    font-family: "FontAwesome";
+    font-size: 1.5em;
+    height: 46px;
+    left: 45%;
+    padding: 8px;
+    position: absolute;
+    top: -25px;
+    width: 47px;
+}
+.cslider_txt:after{
+    background: none repeat scroll 0 0 #fff;
+    border-color: transparent transparent #ccc #ccc;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    bottom: -16px;
+    content: "";
+    height: 30px;
+    left: 10%;
+    position: absolute;
+    width: 30px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.cslider_user{
+    padding: 15px 0 15px 60px;
+}
+.cslider_user_info{
+    padding-left: 15px;
+    text-align: left;
+}
+.cslider_user_info .uname_f20{
+    color: #333333;
+    font-size: 20px;
+}
+.cslider_user_info p{
+    color: #808080;
+    font-size: 16px;
+}
+/*.cslider_txt:after{
+    border-color: #ccc transparent transparent;
+    border-style: solid;
+    border-width: 20px;
+    bottom: -40px;
+    content: "";
+    left: 10%;
+    position: absolute;
+}*/
+/*.arrow_dwn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-right: none;
+    position: absolute;
+    left: 10%;
+    bottom: -10px;
+}*/
+
+.flex-control-nav{
+    bottom: 0;
+    margin-top: 30px;
+    position: relative;
+    right: 0;
+    top: inherit;
+    width: auto;
+}
+.flex-control-paging li a{
+    /*background: #CCCCCC;*/
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);  
+    height: 20px;
+    text-indent: -9999px;
+    width: 20px;
+
+}
+.flex-control-paging li a, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.flex-control-paging li a:hover{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);      
+}
+.flex-control-paging li a.flex-active{
+    background: #FFFFFF;
+}
+
 /* @Media Query Css*/
 @media (max-width:1024px){
     .top_nav{margin-right: 100px !important;}
@@ -398,6 +520,7 @@ li.text-center .btn_orange, .big_bg .btn_orange{
         display: block;
         padding: 10px 20px;
     }
+    .txt_slide_div {width: auto;}
     .subscription_form .form-control{width: 70%;}
 }
 @media (max-width:767px){
@@ -437,6 +560,7 @@ li.text-center .btn_orange, .big_bg .btn_orange{
         max-width: 100%;
     }
     #vid_container{width: 100%;}
+    .txt_slide_div {width: inherit;}
     .subscription_form .form-control{width: 65%;}
 }
 @media (max-width:480px){
