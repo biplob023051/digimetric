@@ -24,6 +24,7 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
             <?php echo $cakeDescription ?>:
             <?php echo $title_for_layout; ?>
         </title>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,400' rel='stylesheet' type='text/css'>
         <?php
         echo $this->Html->meta('icon');
         echo $this->fetch('meta');
@@ -37,20 +38,24 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
         echo $this->Html->css('jquery.selectBox.css');
         echo $this->Html->css('flexslider.css');
         echo $this->Html->css('responsive.css');
-//        echo $this->fetch('scsript');
-        ?>   
+        echo $this->Html->css('main.css');
+        echo $this->fetch('css');
+        ?>
+        <?php
+        echo $this->Html->script('jquery.js');        
+        echo $this->fetch('scsript');
+        ?>
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]--> 
         <?php
         ?>
-    </head>
-    <body>
         <?php echo $this->element('google_analytics'); ?>
+    </head>
+    <body>        
         <?php echo $this->element('home_header'); ?>
         <?php echo $this->Session->flash(); ?>
-
         <?php echo $this->fetch('content'); ?>
         <?php echo $this->element('home_footer'); ?>
         <?php // echo $this->element('sql_dump'); ?>

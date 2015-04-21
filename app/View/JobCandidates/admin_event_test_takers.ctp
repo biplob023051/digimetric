@@ -44,8 +44,6 @@ echo $this->Html->css('admin_css/assets/plugins/jquery-easy-pie-chart/jquery.eas
                                     <th>Phone</th>
                                     <th>Confirmation Code</th>
                                     <th>Rankings</th>
-                                    <th>Time Duration</th>
-                                    <th>Time Taken</th>
                                     <th> Action </th>
                                 </tr>
                             </thead>
@@ -61,8 +59,6 @@ echo $this->Html->css('admin_css/assets/plugins/jquery-easy-pie-chart/jquery.eas
                                             <td><?php echo $v["JobCandidate"]["phone_no"]; ?></td>
                                             <td><?php echo $v["JobCandidate"]["confirmation_code"]; ?></td>
                                             <td><?php echo $v["CandidateRanking"]["result"] . '(' . $v["CandidateRanking"]["total"] . ')'; ?></td>
-                                             <td><?php echo $v["CandidateRanking"]["time_duration"]; ?></td>
-                                            <td><?php echo $v["CandidateRanking"]["time_taken"]; ?></td>
                                             <td>
                                                 <a class="can_delete" href=" <?php echo ADMIN_BASEURL; ?>job_candidates/delete_event_taker/<?php echo $v["JobCandidate"]["id"]; ?>"  onclick="return delete_fun();"><i class="can_delete fa fa-times fonta"></i></a> 
                                             </td>

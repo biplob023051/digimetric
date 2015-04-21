@@ -11,330 +11,168 @@ endif;
 App::uses('Debugger', 'Utility');
 ?>
 
-
-<div class="flexslider">
-
-    <ul class="slides">   
-
-        <li>
-            <div class="container ghd ">
-                <h1 class=" text-center bounceIn animated" data-delay="100">KNOWLEDGE ASSESSMENT</h1>
-                <div class="clearfix"></div>
-                <h1 class=" text-center bounceIn animated" data-delay="200">TOOL  FOR  HIRING</h1>
-            </div>
-
-        </li>
-
-        <li>
-            <div class="container ghd find ">
-                <h1 class=" text-center bounceIn animated" data-delay="100">CANDIDATE DISCOVERY MADE SIMPLE</h1>
-
-            </div>
-
-        </li>
-
-        <li>
-            <div class="container ghd find ">
-                <h1 class=" text-center bounceIn animated find " data-delay="100">FIND THE BEST FIT </h1>
-
-            </div>
-
-        </li>
-
-        <li>
-            <div class="container ghd find ">
-                <h1 class=" text-center bounceIn animated" data-delay="100">SAVES YOUR TIME AND
-                    ENERGY DURING HIRING</h1>
-
-            </div>
-
-        </li>
-
-        <li>
-            <div class="container ghd find ">
-
-                <h1 class=" text-center bounceIn animated" data-delay="100"> GAIN POWERFUL INSIGHTS </h1>
-
-            </div>
-
-        </li>
-    </ul>
-
-
+<div id="flex_area">
+    <section id="slide_flex">
+        <div class="flexslider">
+            <ul class="slides">   
+                <li class="text-center">
+                    <div class="container ghd ">
+                        <h1 class=" text-center bounceIn animated" data-delay="100">We connect your business with the best talent in a fast and affordable way.</h1>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a class="btn btn_orange btn_roll" href="#" data-delay="100">Hire Smarter</a>
+                </li>
+                <li class="text-center">
+                    <div class="container ghd ">
+                        <h1 class=" text-center bounceIn animated" data-delay="100">We connect your business with the best talent in a fast and affordable way.</h1>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a class="btn btn_orange btn_roll" data-delay="100" href="#">Hire Smarter</a>
+                </li>            
+            </ul>
+        </div>
+    </section>
+    <section id="slide_flex_bottom" class="bg_gray">
+        <div class="container text-center">
+            <span class="color_orange">Digimetrik:</span> Providing talent assessment for small and medium size businesses.
+        </div>
+    </section>
 </div>
-
 
 <!-- BEGIN EXPERIENCE SECTION -->
 <div id="intel">
-    <section class="no-padding-bottom experience" >
-        <div class="container ">  
-
-
-
-            <!-- BEGIN HEADING -->
-            <h1 class="text-center red"><img src="img/round1.png" alt="img"/><span>ASSESS KNOWLEDGE OF JOB CANDIDATES </span></h1>
-            <!-- END HEADING -->
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN EXPERIENCE CONTENT -->
-                    <div class="experience-content text-center bounceIn" data-delay="100">
-                        <p>On Digimetrik, you can assess the knowledge of your job candidates by using subject specific knowledge assessment tests<br>
-                            Do you wonder if an engineer knows mobile application development or if a finance graduate knows what <br>
-                            cash flow is? If yes, you are at the right place. Digimetrik will test, you will decide</p>
-                    </div>
-                    <!-- END EXPERIENCE CONTENT -->
-                </div>
+    <section class="no-padding-bottom experience bg_white" >
+        <div class="container ">
+            <div class="text-center sec_text">
+                <h2 class="sec_heading">We test, you decide.</h2>
+                <p>Digimetrik will help you to select the right person for the job. </p>
             </div>
-            <div class="row">
-                <!-- BEGIN DEVICES -->
-                <div class="col-md-12 text-center devices vedio" data-delay="100">
-                        <!--<img src="img/vedio.png" alt="">-->
-                        <iframe width="825" height="463" src="//www.youtube.com/embed/ujjjBdFFEmE?list=UU_ZYo8S9i9vc-6OJSzpSrSg&rel=0" frameborder="0" allowfullscreen>
-                        
-                        </iframe>
+            <div id="vid_container">
+                <div id="video_panel" class="bg_gray">
+                    <iframe width="100%" height="463" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/ujjjBdFFEmE?list=UU_ZYo8S9i9vc-6OJSzpSrSg&amp;rel=0"></iframe>
                 </div>
-
-                <!-- END DEVICES -->
-            </div>
+                <div id="vid_shadow">
+                    <!--<img alt="" class="img-responsive" src="<?php //echo BASEURL;     ?>/img/vid_shadow.png"/>-->
+                </div>
+            </div>            
         </div>
-
-        <!--1-->
     </section>
 
-    <section class="parallax-main-banner parallax-main-banner2">
-        <!-- BEGIN CAROUSEL -->
-        <div class="container">
-            <div id="mycarouselb" class="jcarousel-skin-tango find cani">
+    <div id="vid_pnl_btm" class="bg_gray"></div>
 
-                <ul>
-                    <li>
-                        <h1>CANDIDATE  DISCOVERY  MADE  SIMPLE</h1>
-
-                    </li>
-                    <li>
-                        <h1>CANDIDATE  DISCOVERY  MADE  SIMPLE</h1>
-                    </li>
-                    <li>
-                        <h1>CANDIDATE  DISCOVERY  MADE  SIMPLE</h1>
-                    </li>
-                    <li>
-                        <h1>CANDIDATE  DISCOVERY  MADE  SIMPLE</h1>
-                    </li>
-                    <li>
-                        <h1>CANDIDATE  DISCOVERY  MADE  SIMPLE</h1>
-                    </li>
-                </ul>
+    <section class=" bg_white" >
+        <div class="container ">
+            <div class="text-center sec_text">
+                <h2 class="sec_heading">knowledge Assessment Platform for Technical Recruiting</h2>
             </div>
-        </div>
-        <div class="clear"></div>
-    </section>
-    <!-- END BANNER -->
-    <section id="find_a">
-        <div class="container">  
-            <!-- BEGIN HEADING -->
-            <h1 class="text-center red"><img src="img/round2.png" alt="img"/><span>FAST AND ACCURATE  </span></h1>
-            <!-- END HEADING -->
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN EXPERIENCE CONTENT -->
-                    <div class="experience-content text-center bounceIn" data-delay="100">
-                        <p>Login your account, assign knowledge assessment tests to your job candidates<br>
-                            and see their knowledge levels right away</p>
-                    </div>
-                    <!-- END EXPERIENCE CONTENT -->
+            <div class="box_holder clearfix">
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="100">
+                    <img alt="Access Knowledge of Job Candidates" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/access_knowledge.png"/>
+                    <h2 class="kapftr_title text-center">Assess Knowledge of Job Candidates</h2>
+                    <p class="txt_hide">With Digimetrik, you can assess the knowledge of your job candidates by using subject-specific assessment tests.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
-            </div>
-            <div class="row">
-                <!-- BEGIN DEVICES -->
-                <div class="col-md-12 text-center devices bounceInUp " data-delay="100"><img src="img/tab.png" alt=""> </div>
-                <div class="col-md-12"><img src="img/shader.png" alt=""></div>
-                <!-- END DEVICES -->
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="200">
+                    <img alt="Fast and Accurate" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/fats_accurate.png"/>
+                    <h2 class="kapftr_title text-center" style="height: 50px;">Fats and Accurate</h2>
+                    <p class="txt_hide">Log into your account, assign knowledge assessment tests to your job candidates, and see their performance right away.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                </div>
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr kapftr_last text-center bounceIn animated" data-delay="300">
+                    <img alt="Amazing Job" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/amazing_job.png"/>
+                    <h2 class="kapftr_title text-center">It Only Takes One Right Hire to do an Amazing Job</h2>
+                    <p class="txt_hide">Finding the best fit for the position will create an efficient and happy work environment.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <section class="parallax-main-banner parallax-main-banner3">
-
-
-        <div id="heading">
-            <!-- BEGIN CAROUSEL -->
-            <div class="container">
-                <div id="mycarouselc" class="jcarousel-skin-tango find">
-
-                    <ul>
-                        <li>
-                            <h1>FIND  THE  BEST  FIT</h1>
-
-                        </li>
-                        <li>
-                            <h1>FIND  THE  BEST  FIT</h1>
-                        </li>
-                        <li>
-                            <h1>FIND  THE  BEST  FIT</h1>
-                        </li>
-                        <li>
-                            <h1>FIND  THE  BEST  FIT</h1>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-            <!-- /END CAROUSEL -->
+    <section id="get_started" class="big_bg">
+        <div class="container text-center">
+            <h1 class="title_txt bounceIn animated" dat-delay="100">Digimetrik provides customizable knowledge assessment tests in Science, Engineering,and Technology.</h1>
+            <a href="#" class="btn btn_orange">Get Started</a>
         </div>
-
-                    <!--<a href="#only" class="bot"><img src="img/bottom.png" alt="img"/></a>-->
     </section>
-    <section id="only"><div class="container">  
-            <!-- BEGIN HEADING -->
-            <h1 class="text-center red"><img src="img/round3.png" alt="img"/><span> IT ONLY TAKES ONE RIGHT FIT TO DO AMAZING JOB  </span></h1>
-            <!-- END HEADING -->
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN EXPERIENCE CONTENT -->
-                    <div class="experience-content text-center bounceIn" data-delay="100">
-                        <p>Finding the best fit for the position will create efficient and  happy work environment<br>
-                            Digimetrik will help you to select the right person for the job. Digimetrik wilL<br>
-                            eliminate wrong hiring decisions in your organization</p>
-                    </div>
-                    <!-- END EXPERIENCE CONTENT -->
-                </div>
-            </div>
-            <div class="row">
-                <!-- BEGIN DEVICES -->
-                <div class="col-md-12 text-center devices bounceInUp " data-delay="100"><img src="img/per.png" alt=""> </div>
 
-                <!-- END DEVICES -->
+    <section class=" bg_white" >
+        <div class="container ">
+            <div class="text-center sec_text">
+                <h2 class="sec_heading">Our Assessment</h2>
+            </div>
+            <div class="box_holder clearfix">
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="100">
+                    <img alt="Access Knowledge of Job Candidates" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/engineering.png"/>
+                    <h2 class="kapftr_title text-center">Engineering</h2>
+                    <p class="txt_hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                </div>
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="200">
+                    <img alt="Fast and Accurate" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/science.png"/>
+                    <h2 class="kapftr_title text-center">Science</h2>
+                    <p class="txt_hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                </div>
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr kapftr_last text-center bounceIn animated" data-delay="300">
+                    <img alt="Amazing Job" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/tecnology.png"/>
+                    <h2 class="kapftr_title text-center">Technology</h2>
+                    <p class="txt_hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-    <section class="parallax-main-banner parallax-main-banner4">
-
-        <div id="heading">
-            <!-- BEGIN CAROUSEL -->
-            <div class="container">
-                <div id="mycarouseld" class="jcarousel-skin-tango">
-
-                    <ul>
-                        <li>
-                            <h1>SAVES  YOUR  TIME  AND </h1>
-                            <h1>ENERGY  DURING  HIRING</h1>
-
-                        </li>
-                        <li>
-
-                            <h1>SAVES  YOUR  TIME  AND </h1>
-                            <h1>ENERGY  DURING  HIRING</h1>
-                        </li>
-                        <li>
-                            <h1>SAVES  YOUR  TIME  AND </h1>
-                            <h1>ENERGY  DURING  HIRING</h1>
-                        </li>
-                        <li>
-                            <h1>SAVES  YOUR  TIME  AND </h1>
-                            <h1>ENERGY  DURING  HIRING</h1>
-                        </li>
-                        <li>
-                            <h1>SAVES  YOUR  TIME  AND </h1>
-                            <h1>ENERGY  DURING  HIRING</h1>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- /END CAROUSEL -->
+    <section id="create_account" class="big_bg">
+        <div class="container text-center">
+            <h1 class="title_txt bounceIn animated" dat-delay="100">Our Talent Analytics Dashboard identifies the best candidates in real-time.</h1>
+            <a href="#" class="btn btn_orange">Create Account</a>
         </div>
-        <!--<a href="#save" class="bot"><img src="img/bottom.png" alt="img"/></a>--->
-    </section>
-    <section id="save">
-        <div class="container">  
-            <!-- BEGIN HEADING -->
-            <h1 class="text-center red"><img src="img/round4.png" alt="img"/><span>SAVES YOUR TIME AND ENERGY DURING HIRING </span></h1>
-            <!-- END HEADING -->
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN EXPERIENCE CONTENT -->
-                    <div class="experience-content text-center bounceIn" data-delay="100">
-                        <p>On Digimetrik, you can test as many candidates as you want simultaneously <br>
-                            After you see the results, you can decide which candidates<br>.you should focus your time and energy on
-                        </p>
-                    </div>
-                    <!-- END EXPERIENCE CONTENT -->
-                </div>
-            </div>
-            <!-- BEGIN DEVICES -->
-
-            <!-- END DEVICES -->
-        </div>
-
     </section>
 
-
-
-    <section class="parallax-main-banner parallax-main-banner5">
-
-        <div id="heading">
-            <!-- BEGIN CAROUSEL -->
-            <div class="container">
-                <div id="mycarousele" class="jcarousel-skin-tango find">
-
-                    <ul>
-                        <li>
-                            <h1>GAIN  POWERFUL  INSIGHTS</h1>
-
-                        </li>
-                        <li>
-                            <h1>GAIN  POWERFUL  INSIGHTS</h1>
-                        </li>
-                        <li>
-                            <h1>GAIN  POWERFUL  INSIGHTS</h1>
-                        </li>
-                        <li>
-                            <h1>GAIN  POWERFUL  INSIGHTS</h1>
-                        </li>
-                        <li>
-                            <h1>GAIN  POWERFUL  INSIGHTS</h1>
-                        </li>
-                    </ul>
+    <section class=" bg_white" >
+        <div class="container ">            
+            <div class="box_holder clearfix">
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="100">
+                    <img alt="Access Knowledge of Job Candidates" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/time.png"/>
+                    <h2 class="kapftr_title text-center">Save Time and Energy During Hiring</h2>
+                    <p class="txt_hide">Test as many candidates as you want simultaneously. After you see the results, decide which candidates you should focus your time and energy on.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
-            </div>
-            <!-- /END CAROUSEL -->
-        </div>
-        <!-- BEGIN GO TO TOP <a href="#gain" class="bot"><img src="img/bottom.png" alt="img"/></a>--->
-    </section>
-
-    <!-- END BANNER -->
-    <!-- END BANNER -->
-    <section id="gain">
-        <div class="container">  
-            <!-- BEGIN HEADING -->
-            <h1 class="text-center red"><img src="img/round5.png" alt="img"/><span>GAIN POWERFUL INSIGHTS  </span></h1>
-            <!-- END HEADING -->
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN EXPERIENCE CONTENT -->
-                    <div class="experience-content text-center bounceIn" data-delay="100">
-                        <p>  See the performance results of job candidates immediately Each and every candidates performance result is shown<br>
-                            under your account. If you want, you can print the results and share them with <br>
-                            other decision makers in your organization. It is fast and easy
-                        </p>
-                    </div>
-                    <!-- END EXPERIENCE CONTENT -->
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="200">
+                    <img alt="Fast and Accurate" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/analytics.png"/>
+                    <h2 class="kapftr_title text-center">Talent Analytics Dashboard</h2>
+                    <p class="txt_hide">See the performance results of job candidates in real-time. Each and every candidate's performance result is shown under your account.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
-            </div>
-            <div class="row">
-                <!-- BEGIN DEVICES -->
-                <div class="col-md-12 text-center devices bounceInUp " data-delay="100"><img src="img/users.png" alt=""> </div>
-
-                <!-- END DEVICES -->
+                <div class="col-sm-12 col-sm-4 col-md-4 kapftr kapftr_last text-center bounceIn animated" data-delay="300">
+                    <img alt="Amazing Job" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/print.png"/>
+                    <h2 class="kapftr_title text-center">Print and Share the Results</h2>
+                    <p class="txt_hide">Print and share the results of candidate assessments with other decision makers in your organization. It's fast and easy.</p>
+                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- END EXPERIENCE SECTION -->
+    <section class=" bg_gray" >
+        <div class="container ">            
+            <div class="text-center sec_text">
+                <h2 class="sec_heading">From The Words Of Our Clients</h2>
+            </div>
+        </div>
+    </section>
 
+    <section id="subscribe_newsletter" class="big_bg">
+        <div class="container text-center">
+            <img alt="" class="img-responsive" src="<?php echo BASEURL; ?>/img/paper_ap.png" style="margin: 40px auto 0px;"/>
+            <h1 class="title_txt bounceIn animated" dat-delay="100">Subscribe to our newsletter today to learn about the best practices in knowledge assessment and talent acquisition.</h1>
+            <div class="subscription_form clearfix">
+                <form accept-charset="utf-8" action="" method="post">
+                    <input type="email" class="form-control" placeholder="Enter your email address..."/>
+                    <input type="button" class="btn btn_subscribe" value="SUBSCRIBE"/>
+                </form>
+            </div>
+        </div>
+    </section>    
 </div>
-
-

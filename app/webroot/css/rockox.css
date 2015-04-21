@@ -22,7 +22,7 @@
     font-style: normal;
 
 }
-*	 {margin:0px;padding:0px;text-decoration:none; outline:none;}
+/**	 {margin:0px;padding:0px;text-decoration:none; outline:none;}*/
 
 .error{ border:1px solid #F00 !important; background:#F9C0C0;}
 .success-msg{background:#E9F7DD;border: 1px solid #ABD0A8;color: #589051; margin-bottom: 30px;max-width: 1129px;padding: 11px 16px; display:none;}

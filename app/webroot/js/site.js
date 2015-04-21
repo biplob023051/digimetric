@@ -1,25 +1,21 @@
 // JavaScript Document
-
 $(document).ready(function() {
     $(".toogimg").click(function() {
         $(".list").slideToggle("slow");
     });
-
 });
-
-
-
 
 //slider
 jQuery(function() {
-
     //parallaax
     jQuery.stellar({
         horizontalScrolling: false,
         verticalOffset: 0
     });
+    
     //fancybox
     jQuery(".fancybox").fancybox();
+    
     jQuery(".various").fancybox({
         maxWidth: 1100,
         maxHeight: 600,
@@ -37,11 +33,13 @@ jQuery(function() {
 
 
     });
+    
     jQuery('#mycarouselb').jcarousel({
         vertical: true
 
 
     });
+    
     jQuery('#mycarouselc').jcarousel({
         vertical: true
 
@@ -53,20 +51,18 @@ jQuery(function() {
 
 
     });
+    
     jQuery('#mycarousele').jcarousel({
         vertical: true
 
 
     });
+    
     jQuery('#mycarouselb').jcarousel({
         vertical: true
 
 
     });
-
-
-
-
 
     //smooth scroll to href value
     jQuery(".tabs-btn ul li a, .navbar-nav li a, .navbar-brand").click(function(event) {
@@ -81,6 +77,7 @@ jQuery(function() {
         //go to destination
         jQuery('html,body').animate({scrollTop: dest}, 1000, 'swing');
     });
+    
     //toggle map
     jQuery(".map-title h4 span").click(function(e) {
         jQuery(".map iframe").slideToggle();
@@ -99,11 +96,7 @@ jQuery(function() {
         jQuery('html, body').animate({scrollTop: 0}, '2000');
         return false;
     });
-
-
-
-
-
+    
     //pie charts	
     jQuery('#pie-charts').waypoint(function(direction) {
         jQuery('.chart').easyPieChart({
@@ -129,7 +122,6 @@ jQuery(function() {
         offset: function() {
             return jQuery.waypoints('viewportHeight') - jQuery(this).height() + 100;
         }
-
     });
 
     jQuery('#pie-charts').waypoint(function(direction) {
@@ -143,7 +135,6 @@ jQuery(function() {
         offset: function() {
             return jQuery.waypoints('viewportHeight') - jQuery(this).height() + 100;
         }
-
     });
 
     jQuery('#pie-charts').waypoint(function(direction) {
@@ -157,7 +148,6 @@ jQuery(function() {
         offset: function() {
             return jQuery.waypoints('viewportHeight') - jQuery(this).height() + 100;
         }
-
     });
 
     jQuery('#pie-charts').waypoint(function(direction) {
@@ -171,14 +161,11 @@ jQuery(function() {
         offset: function() {
             return jQuery.waypoints('viewportHeight') - jQuery(this).height() + 100;
         }
-
     });
-
 });
 
 //form submit
-function checkmail(input)
-{
+function checkmail(input){
     var pattern1 = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (pattern1.test(input)) {
         return true;
@@ -186,6 +173,7 @@ function checkmail(input)
         return false;
     }
 }
+
 function proceed() {
     var name = document.getElementById("name");
     var email = document.getElementById("email");
@@ -250,6 +238,4 @@ function proceed() {
             }
         });
     }
-}
-
-		
+}	

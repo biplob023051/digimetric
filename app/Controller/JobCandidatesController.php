@@ -211,59 +211,31 @@ class JobCandidatesController extends AppController {
 		$CandidateTestAnswer = $this->request->data['CandidateTestAnswer']; 
 		$candidate_test_id = $CandidateTestAnswer["candidate_test_id"];
 		$test_questions = $CandidateTestAnswer["test_questions"];
-		$test_question_answers = isset($CandidateTestAnswer["test_question_answers"]) ? $CandidateTestAnswer["test_question_answers"] : array();
-
-        $hours = $this->request->data['Time']['hours'];
-        $mins = $this->request->data['Time']['mins'];
-        $secs = $this->request->data['Time']['secs'];
-
-        $test_id = $this->request->data['Time']['test_id'];
-
-        if ($mins < 0) {
-            $hours = $hours - 1;
-            $mins = 60 + $mins; 
-        }
-
-        if ($secs < 0) {
-            $mins = $mins - 1;
-            $secs = 60 + $secs; 
-        }
-
-        
-        unset($this->request->data['Time']);
-
+		$test_question_answers = $CandidateTestAnswer["test_question_answers"];
+		
 		foreach($test_questions as $k =>$v)
 		{
-            if (isset($test_question_answers[$v])) {
-                foreach($test_question_answers[$v] as $k1 => $v1){
-                    $arr["CandidateTestAnswer"]["candidate_test_id"] = $candidate_test_id;
-                    $arr["CandidateTestAnswer"]["test_question_id"] = $v;
-                    $arr["CandidateTestAnswer"]["test_question_answer_id"] = $v1;
-                    $arr["CandidateTestAnswer"]["created_time"] = time();
-                    //debug($arr);
-                    $this->CandidateTestAnswer->create();
-                    $this->CandidateTestAnswer->save($arr);
-                }
-            }
-
+			foreach($test_question_answers[$v] as $k1 => $v1){
+				$arr["CandidateTestAnswer"]["candidate_test_id"] = $candidate_test_id;
+				$arr["CandidateTestAnswer"]["test_question_id"] = $v;
+				$arr["CandidateTestAnswer"]["test_question_answer_id"] = $v1;
+				$arr["CandidateTestAnswer"]["created_time"] = time();
+				//debug($arr);
+				$this->CandidateTestAnswer->create();
+                $this->CandidateTestAnswer->save($arr);
+			}
 		}
         // redirect after saving all questions - biplob
         $this->Session->setFlash(__('Result has been saved'));
-        return $this->redirect(array('action' => 'result_success', $candidate_test_id, $hours, $mins, $secs, $test_id));
+        return $this->redirect(array('action' => 'result_success', $candidate_test_id));
 	}
 
-	public function result_success($candidate_test_id = null, $hours = null, $mins = null, $secs = null, $test_id = null) {
-        $this->set('title_for_layout', 'Result success');        
-
+	public function result_success($candidate_test_id = null) {
+        $this->set('title_for_layout', 'Result success');
+        
         // if not logged in candidate and not valide candidate_test_id
         $candidate = $this->Session->read('Candidate');
-        if (empty($candidate)) {
-            $this->Session->setFlash(__('You are not authorized to view this page'));
-            return $this->redirect('/');    
-        }
-
-
-        if (empty($candidate_test_id) || empty($test_id)) {
+        if (empty($candidate) || empty($candidate_test_id)) {
             $this->Session->setFlash(__('You are not authorized to view this page'));
             return $this->redirect('/');    
         }
@@ -292,24 +264,17 @@ class JobCandidatesController extends AppController {
         );
         $testQuestionAnswers = Hash::combine($testQuestionAnswers, '{n}.TestQuestionAnswers.test_question_id', '{n}.TestQuestionAnswers.id');
         // find not correct answer
-        $difference = Hash::diff($testAnswers, $testQuestionAnswers);
+        $difference = Set::diff($testAnswers, $testQuestionAnswers);
         // total questions
         $totalQuestions = count($testAnswers);
         // final correct answer
         $correct = $totalQuestions - count($difference);
-
-        $testInfo = $this->Test->findById($test_id);
 
         // save result in candidate ranking table
         $dataToSave['CandidateRanking']['job_id'] = $candidate['JobCandidate']['job_id'];
         $dataToSave['CandidateRanking']['job_candidate_id'] = $candidate['JobCandidate']['id'];
         $dataToSave['CandidateRanking']['result'] = $correct;
         $dataToSave['CandidateRanking']['total'] = $totalQuestions;
-        $dataToSave['CandidateRanking']['time_taken'] = $hours . ':' . $mins . ':' . $secs;
-        $dataToSave['CandidateRanking']['time_duration'] = $testInfo['Test']['duration_hour'] . ':' . $testInfo['Test']['duration_mins'] . ':' . $testInfo['Test']['duration_secs'];
-
-        $this->Session->delete('Candidate');
-
         $this->CandidateRanking->create();
         if ($this->CandidateRanking->save($dataToSave)) {
             // find all result related to this 
@@ -394,11 +359,6 @@ class JobCandidatesController extends AppController {
             
             $job_id = !empty($job) ? $job['Job']['id'] : '';
 
-            $this->JobCandidate->virtualFields = array(
-                'result' => 'CandidateRanking.result',
-                'time_taken' => 'CandidateRanking.time_taken'
-            );
-
             $this->paginate = array(
                 'joins' => array( 
                     array( 
@@ -413,12 +373,11 @@ class JobCandidatesController extends AppController {
                 ),
                 'conditions' => array('JobCandidate.confirmation_code' => $site_settings['confirmation_code']),
                 'limit' => 10,
-                'fields' => array('JobCandidate.*', 'CandidateRanking.*'),
-                'order' => array('JobCandidate.result' => 'DESC', 'JobCandidate.time_taken' => 'ASC')
+                'order' => array('CandidateRanking.result DESC'),
+                'fields' => array('JobCandidate.*', 'CandidateRanking.*')                
             );
 
             $candidates = $this->paginate('JobCandidate');
-            
         } else {
             $candidates = array();
         }
