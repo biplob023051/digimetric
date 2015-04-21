@@ -1,10 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Apr 18, 2015, 11:58:16 AM
+/*     
     Author     : RAKIB
 */
 body {
@@ -118,6 +112,8 @@ ul,ol{list-style-type: none;}
 .ghd h1{
     font-family: 'Merriweather Sans', sans-serif;
 }
+
+/* Buttons css and effects */
 .btn_orange{
     background-color: #ff8100;
     border: medium none;
@@ -138,12 +134,19 @@ ul,ol{list-style-type: none;}
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d; 
 }
-
+.btn_hs:after {
+    content: 'Hire Smarter';
+}
+.btn_gs:after {
+    content: 'Get Started';
+}
+.btn_ca:after {
+    content: 'Create Account';
+}
 .btn_roll:after {
     top: -98%;
     background: #FFFFFF;
     color: #ff8100;
-    content: 'Hire Smarter';
     -webkit-transform-origin: 0% 100%;
     -webkit-transform: rotateX(90deg);
     -moz-transform-origin: 0% 100%;
@@ -173,6 +176,9 @@ ul,ol{list-style-type: none;}
     transform-origin: 50% 100%;
     transform: rotateX(-90deg) translateY(100%);
 }
+
+/* Ends of buttons css */
+
 li.text-center .btn_orange, .big_bg .btn_orange{
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 20px;  
@@ -336,6 +342,10 @@ li.text-center .btn_orange, .big_bg .btn_orange{
     padding: 2px 0;
     text-align: left;
 }
+.foot_qlink li a:hover{
+    color: #AAAAAA;
+    text-decoration: underline;
+}
 .foot_qlink_social li{
     background: url(../img/social_sprite.png) no-repeat;
     padding-left: 35px;
@@ -366,6 +376,7 @@ li.text-center .btn_orange, .big_bg .btn_orange{
 /* Misc */
 .auto_mrg{margin: 0 auto;}
 .no_pad{padding: 0;}
+.btn:active{outline: none !important;}
 
 .top_nav{
     -webkit-transition: margin-right 300ms linear;

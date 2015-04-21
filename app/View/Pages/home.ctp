@@ -20,14 +20,14 @@ App::uses('Debugger', 'Utility');
                         <h1 class=" text-center bounceIn animated" data-delay="100">We connect your business with the best talent in a fast and affordable way.</h1>
                         <div class="clearfix"></div>
                     </div>
-                    <a class="btn btn_orange btn_roll" href="#" data-delay="100">Hire Smarter</a>
+                    <a class="btn btn_orange btn_roll btn_hs" href="#" data-delay="100">Hire Smarter</a>
                 </li>
                 <li class="text-center">
                     <div class="container ghd ">
                         <h1 class=" text-center bounceIn animated" data-delay="100">We connect your business with the best talent in a fast and affordable way.</h1>
                         <div class="clearfix"></div>
                     </div>
-                    <a class="btn btn_orange btn_roll" data-delay="100" href="#">Hire Smarter</a>
+                    <a class="btn btn_orange btn_roll btn_hs" data-delay="100" href="#">Hire Smarter</a>
                 </li>            
             </ul>
         </div>
@@ -91,7 +91,7 @@ App::uses('Debugger', 'Utility');
     <section id="get_started" class="big_bg">
         <div class="container text-center">
             <h1 class="title_txt bounceIn animated" dat-delay="100">Digimetrik provides customizable knowledge assessment tests in Science, Engineering,and Technology.</h1>
-            <a href="#" class="btn btn_orange">Get Started</a>
+            <a href="#" class="btn btn_orange btn_roll  btn_gs">Get Started</a>
         </div>
     </section>
 
@@ -126,7 +126,7 @@ App::uses('Debugger', 'Utility');
     <section id="create_account" class="big_bg">
         <div class="container text-center">
             <h1 class="title_txt bounceIn animated" dat-delay="100">Our Talent Analytics Dashboard identifies the best candidates in real-time.</h1>
-            <a href="#" class="btn btn_orange">Create Account</a>
+            <a href="#" class="btn btn_orange btn_roll btn_ca">Create Account</a>
         </div>
     </section>
 
