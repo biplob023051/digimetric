@@ -179,8 +179,8 @@ header#home {
 .sbt_S:hover{ background-color:#de3008;}
 .sbt_ms{ font-size:14px; margin-top:0px; }
 .blogs .flex-control-paging li a{ display:none !important;}
-.sbt_ms a{ color:#fff; text-decoration:underline;}
-.sbt_ms a:hover{text-decoration:none; border-bottom:1px solid #f36523;}
+.sbt_ms a{ color:#0088cc ; text-decoration:none;}
+.sbt_ms a:hover{text-decoration:underline;}
 .blogss .flex-control-paging li a{ display:none;}
 .flexslider.blogss {
 }
@@ -902,6 +902,9 @@ a.selectBox.month.selectBox-dropdown{
     width: 100% !important;
     display: block !important;
     border-radius:0px !important;}
+#select_country a.selectBox.month.selectBox-dropdown{
+    background: #ebebeb !important;
+}
 .month.selectBox-dropdown .selectBox-arrow{  
     position: absolute;
     top: 0;

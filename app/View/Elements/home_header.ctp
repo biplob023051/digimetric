@@ -296,57 +296,55 @@ function validateEmail(email) {
 
 <div class="modal fade" id="sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <?php echo $this->Form->create('User', array('url' => array('controller' => 'users', 'action' => 'ajax_signup'))); ?>
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="modal-dialog mod_login_dialog">
+        <div class="modal-content mod_login">
+            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <div class="row">
-                <div class="col-lg-9 text-center devices mmatis " > 
-                    <!-- BEGIN DEVICES -->
-                    <div class="col-md-12 text-center devices"> <img src="<?php echo BASEURL; ?>/img/logo.png" alt=""></div>
-                </div>
-                <div class="clear"></div>
-                <div class="form_pae col-lg-12 text-center mmatis">
-                    Enter your information below. All fields are required
-                </div>
-                <div class="col-lg-9 text-center devices mauto" style="margin-top:0px;" > 
-                    <div class="centrza">
-                        <div class="col-md-12">
-                            <input type="text" name="first_name" id="first_name" placeholder="First name"/>
-                        </div>
-                        <div class="col-md-12">
-                            <input type="text" name="last_name" id="last_name" placeholder="Last name" />
-                        </div>
-                        <div class="col-md-12">
-                            <input type="password" name="password_s" id="password_s" placeholder="Password"/>
-                        </div>
-                        <div class="col-md-12">
-                            <input type="password" name="r_password_s" id="r_password_s" placeholder="Retype password">
-                        </div>
-                        <div class="col-md-12">
-                            <input type="text" name="email" id="email_signup" placeholder="Email"/>
-                        </div>
-                        <div class="col-lg-12" style="margin-bottom:20px;">
-                            <?php // debug($all_locations); ?>
-                            <select  class="month" name="country" id="country">
-                                <option value="0">Country </option>
-                                <?php foreach ($all_locations as $key => $value) { ?>
-                                    <option value="<?php echo $value['Country']['country_name'] ?>"><?php echo $value['Country']['country_name'] ?></option>
-
-                                <?php } ?>
-                            </select>       
-                        </div> 
-                        <div class="col-md-12">
-                            <input type="text" name="company" id="company_name" placeholder="Company name"/>
-                        </div>
-
-                        <div class="processing_signup_form">
-                            <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
-                        </div>
-                        <div class="col-md-12">
-                            <input onclick="saveuser()" type="button" value="Sign Up" class="sbt_S" id="btn_submit">
-                        </div>
-                        <div class="clear"></div>
+                <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;"> 
+                    <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
+                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><i class="fa fa-lock fa-2x color_orange"></i></div>
+                        <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Create a New Account</div>
                     </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-md-6 no_pad_lft">                        
+                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First name"/>
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-md-6 no_pad_rgt">
+                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="password" name="password_s" id="password_s" class="form-control" placeholder="Password"/>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="password" name="r_password_s" id="r_password_s" class="form-control" placeholder="Retype password">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="email" id="email_signup" class="form-control" placeholder="Email"/>
+                    </div>
+                    <div class="col-lg-12" style="margin-bottom:20px;" id="select_country">
+                        <?php // debug($all_locations); ?>
+                        <select class="month form-control" name="country" id="country" >
+                            <option value="0">Country </option>
+                            <?php foreach ($all_locations as $key => $value) { ?>
+                                <option value="<?php echo $value['Country']['country_name'] ?>"><?php echo $value['Country']['country_name'] ?></option>
+
+                            <?php } ?>
+                        </select>       
+                    </div> 
+                    <div class="col-md-12">
+                        <input type="text" name="company" id="company_name" class="form-control" placeholder="Company name"/>
+                    </div>
+
+                    <div class="processing_signup_form">
+                        <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
+                    </div>
+                    <div class="col-md-12">
+                        <input onclick="saveuser()" type="button" value="Sign Up" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit">
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
             <!-- END DEVICES --> 
@@ -358,35 +356,40 @@ function validateEmail(email) {
 <!--CANDIDATE LOGIN TO GIVE TEST -->
 <div class="modal fade" id="take_test" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <?php echo $this->Form->create('User', array('url' => array('controller' => 'users', 'action' => 'ajax_signin_candidate'))); ?>
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="modal-dialog mod_login_dialog">
+        <div class="modal-content mod_login">
+            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <div class="row">
-                <div class="col-lg-9 text-center devices mauto" > 
+                <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;">
                     <!-- BEGIN DEVICES -->
-                    <div class="col-md-12 text-center devices"> <img src="<?php echo BASEURL; ?>/img/logo.png" alt=""></div>
-                    <div class="centrz">
-                        <div class="col-md-12">
-                            Code will be valid for 10 different tries.
-                        </div>
-                        <div class="col-md-12">
-                            <input type="text" name="confirmation_code" id="confirmation_code" placeholder="Confirmation Code">
-                        </div>
-                        <div class="col-md-12">
-                            <input type="text" name="candidate_email" id="candidate_email" placeholder="Email">
-                        </div>
-                        <div class="col-md-12">
-                            <input type="text" name="candidate_no" id="candidate_no" placeholder="PhoneNumber">
-                        </div>
-                        <div class="processing_test_form">
-                            <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
-                        </div>
-                        <div class="col-md-12">
-                            <input type="button" value="Submit" class="sbt_S" id="btn_submit" onclick="verfiycandidate();">
-                            <!--<input type="button" value="Submit" class="sbt_S" id="btn_submit" onclick="proceed();">-->
-                        </div>
-                        <div class="clear"></div>
+                    <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
+                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><i class="fa fa-edit fa-2x color_orange"></i></div>
+                        <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Take a New Test</div>
+                        <div class="clearfix"></div>
                     </div>
+                    <div class="col-md-12">
+                        <input type="text" name="confirmation_code" id="confirmation_code" class="form-control" placeholder="Confirmation Code">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="candidate_email" id="candidate_email" class="form-control" placeholder="Email Address">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="candidate_no" id="candidate_no" class="form-control" placeholder="Phone number">
+                    </div>
+                    <div class="processing_test_form">
+                        <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
+                    </div>
+                    <div class="col-md-12">
+                        <input type="button" value="Take Test" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit" onclick="verfiycandidate();">
+                        <!--<input type="button" value="Take Test" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit" onclick="proceed();">-->
+                    </div>
+                    <div class="form_pae col-lg-12 fs_16">
+                        Note : Confirmation code will be valid for 10 different tries.
+                    </div>
+                    <div class="form_pae col-lg-12 sbt_ms">
+                        <a href="#" class="color_blue">Terms of Service</a>&nbsp; | &nbsp;<a href="#" class="color_blue">Privacy Policy</a>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
             <!-- END DEVICES --> 
@@ -396,37 +399,36 @@ function validateEmail(email) {
 </div>
 
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="modal-dialog mod_login_dialog">
+        <div class="modal-content mod_login">
+            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <div class="row">
-                <div class="col-lg-9 text-center devices mauto" >
+                <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;">
                     <!-- BEGIN DEVICES -->
-                    <div class="col-md-12 text-center devices">
-                        <img src="<?php echo BASEURL; ?>/img/logo.png" alt="">
-                    </div>
-                    <div class="form_pae col-lg-12">
-                        Enter your account e-mail to login
+                    <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
+                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><i class="fa fa-user fa-2x color_orange"></i></div>
+                        <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Sign in to Digimetrik</div>
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="email" id="email_login" placeholder="Email">
+                        <input type="text" name="email" id="email_login" class="form-control" placeholder="Email Address">
                     </div>
                     <div class="col-md-12">
-                        <input type="password" name="email" id="password_login" placeholder="Password">
+                        <input type="password" name="email" id="password_login" class="form-control" placeholder="Password">
                     </div>
                     <div class="processing_login_form">
                         <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
                     </div>
                     <div class="col-md-12">
-                        <input type="submit" value="Submit" class="sbt_S" id="btn_submit" onclick="loginuser();">
+                        <input type="submit" value="Sign In" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit" onclick="loginuser();">
                     </div>
                     <div class="form_pae col-lg-12">
                         If you'd like an account for your organization, please 
                         contact us to request more info
                     </div>
-                    <div class="form_pae col-lg-12 sbt_ms"> By submitting your information, you acknowledge that you have read and agree 
-                        .with our <a href="#" >Terms of Service</a> and <a href="#" >Privacy Policy</a>
+                    <div class="form_pae col-lg-12 sbt_ms">
+                        <a href="#" class="color_blue">Terms of Service</a>&nbsp; | &nbsp;<a href="#" class="color_blue">Privacy Policy</a>
                     </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
             <!-- END DEVICES -->
@@ -473,7 +475,7 @@ function validateEmail(email) {
                     </ul>
                 </nav>                
                 <div class="container clearfix"></div>
-                <div id="lang_place">
+                <div id="lang_place" class="hidden-xs">
                     <a href="#" class="active">ENG</a>
                     <a href="#">TUR</a>
                 </div>

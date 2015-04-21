@@ -28,6 +28,7 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
         <?php
         echo $this->Html->meta('icon');
         echo $this->fetch('meta');
+        echo $this->Html->css('font-awesome.min.css');
         echo $this->Html->css('rockox.css');
         echo $this->Html->css('animate.css');
         echo $this->Html->css('pie-charts-style.css');
