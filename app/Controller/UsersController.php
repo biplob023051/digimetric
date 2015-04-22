@@ -467,7 +467,8 @@ class UsersController extends AppController {
 
     public function logout() {
         $this->Session->destroy();
-        $this->redirect('http://digimetrik.com');
+        //$this->redirect('http://digimetrik.com');
+        $this->redirect(array('controller' => 'pages', 'action' => 'index'));
     }
 
 // this is optional function to create user if not already in database. you can do anything with your hybridauth object
