@@ -1,4 +1,7 @@
-app/tmp
+# Ignore paths that contain generated content.
+app/tmp/
+app/webroot/error_log
+app/webroot/uploads/
 =======
 # Compiled source #
 ###################
@@ -43,6 +46,7 @@ nbproject
 Icon?
 ehthumbs.db
 Thumbs.db
+/nbproject/private/
 deploy/sitemap.xml
 
 deploy/sitemap.xml.gz
