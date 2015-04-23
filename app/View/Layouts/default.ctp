@@ -24,7 +24,7 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
             <?php echo $cakeDescription ?>:
             <?php echo $title_for_layout; ?>
         </title>
-        <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,800,300,400,500' rel='stylesheet' type='text/css'>
         <?php
         echo $this->Html->meta('icon');
         echo $this->fetch('meta');

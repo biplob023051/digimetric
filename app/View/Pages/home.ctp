@@ -17,14 +17,20 @@ App::uses('Debugger', 'Utility');
             <ul class="slides">   
                 <li class="text-center">
                     <div class="container ghd ">
-                        <h1 class=" text-center bounceIn animated" data-delay="100">We connect your business with the best talent in a fast and affordable way.</h1>
+                        <h1 class=" text-center bounceIn animated" data-delay="100">
+                            We connect your business with the best talent<br>
+                            in a fast and affordable way.
+                        </h1>
                         <div class="clearfix"></div>
                     </div>
                     <a class="btn btn_orange btn_roll btn_hs" href="#" data-delay="100">Hire Smarter</a>
                 </li>
                 <li class="text-center">
                     <div class="container ghd ">
-                        <h1 class=" text-center bounceIn animated" data-delay="100">We connect your business with the best talent in a fast and affordable way.</h1>
+                        <h1 class=" text-center bounceIn animated" data-delay="100">
+                            We connect your business with the best talent<br>
+                            in a fast and affordable way.
+                        </h1>
                         <div class="clearfix"></div>
                     </div>
                     <a class="btn btn_orange btn_roll btn_hs" data-delay="100" href="#">Hire Smarter</a>
@@ -90,7 +96,7 @@ App::uses('Debugger', 'Utility');
 
     <section id="get_started" class="big_bg">
         <div class="container text-center">
-            <h1 class="title_txt bounceIn animated" dat-delay="100">Digimetrik provides customizable knowledge assessment tests in Science, Engineering,and Technology.</h1>
+            <h1 class="title_txt bounceIn animated" dat-delay="100">Digimetrik provides customizable knowledge assessment<br> tests in Science, Engineering,and Technology.</h1>
             <a href="#" class="btn btn_orange   btn_gs">Get Started</a>
         </div>
     </section>
@@ -104,19 +110,19 @@ App::uses('Debugger', 'Utility');
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="100">
                     <img alt="Access Knowledge of Job Candidates" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/engineering.png"/>
                     <h2 class="kapftr_title text-center">Engineering</h2>
-                    <p class="txt_hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="txt_hide">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore<br> et dolore magna aliqua.</p>
                     <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="200">
                     <img alt="Fast and Accurate" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/science.png"/>
                     <h2 class="kapftr_title text-center">Science</h2>
-                    <p class="txt_hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <p class="txt_hide">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt<br> ut labore et dolore.</p>
                     <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr kapftr_last text-center bounceIn animated" data-delay="300">
                     <img alt="Amazing Job" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/tecnology.png"/>
                     <h2 class="kapftr_title text-center">Technology</h2>
-                    <p class="txt_hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p class="txt_hide">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do<br> eiusmod tempor.</p>
                     <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
             </div>
@@ -125,7 +131,7 @@ App::uses('Debugger', 'Utility');
 
     <section id="create_account" class="big_bg">
         <div class="container text-center">
-            <h1 class="title_txt bounceIn animated" dat-delay="100">Our Talent Analytics Dashboard identifies the best candidates in real-time.</h1>
+            <h1 class="title_txt bounceIn animated" dat-delay="100">Our Talent Analytics Dashboard identifies<br> the best candidates in real-time.</h1>
             <a href="#" class="btn btn_orange  btn_ca">Create Account</a>
         </div>
     </section>
@@ -135,20 +141,20 @@ App::uses('Debugger', 'Utility');
             <div class="box_holder clearfix">
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="100">
                     <img alt="Access Knowledge of Job Candidates" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/time.png"/>
-                    <h2 class="kapftr_title text-center">Save Time and Energy During Hiring</h2>
-                    <p class="txt_hide">Test as many candidates as you want simultaneously. After you see the results, decide which candidates you should focus your time and energy on.</p>
+                    <h2 class="kapftr_title text-center">Save Time and Energy<br> During Hiring</h2>
+                    <p class="txt_hide">Test as many candidates as you want<br> simultaneously. After you see<br> the results, decide which candidates you<br> should focus your time and energy on.</p>
                     <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="200">
                     <img alt="Fast and Accurate" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/analytics.png"/>
-                    <h2 class="kapftr_title text-center">Talent Analytics Dashboard</h2>
-                    <p class="txt_hide">See the performance results of job candidates in real-time. Each and every candidate's performance result is shown under your account.</p>
+                    <h2 class="kapftr_title text-center">Talent Analytics<br> Dashboard</h2>
+                    <p class="txt_hide">See the performance results of job<br> candidates in real-time. Each and<br> every candidate's performance result<br> is shown under your account.</p>
                     <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr kapftr_last text-center bounceIn animated" data-delay="300">
                     <img alt="Amazing Job" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/print.png"/>
-                    <h2 class="kapftr_title text-center">Print and Share the Results</h2>
-                    <p class="txt_hide">Print and share the results of candidate assessments with other decision makers in your organization. It's fast and easy.</p>
+                    <h2 class="kapftr_title text-center">Print and Share<br> the Results</h2>
+                    <p class="txt_hide">Print and share the results of<br> candidate assessments with other<br> decision makers in your organization.<br> It's fast and easy.</p>
                     <a href="#" class="kapftr_link_more">Learn More+</a>
                 </div>
             </div>
@@ -236,7 +242,7 @@ App::uses('Debugger', 'Utility');
     <section id="subscribe_newsletter" class="big_bg">
         <div class="container text-center">
             <img alt="" class="img-responsive" src="<?php echo BASEURL; ?>/img/paper_ap.png" style="margin: 40px auto 0px;"/>
-            <h1 class="title_txt bounceIn animated" dat-delay="100">Subscribe to our newsletter today to learn about the best practices in knowledge assessment and talent acquisition.</h1>
+            <h1 class="title_txt bounceIn animated" dat-delay="100">Subscribe to our newsletter today to learn about the best<br> practices in knowledge assessment and talent acquisition.</h1>
             <div class="subscription_form clearfix">
                 <form accept-charset="utf-8" action="" method="post">
                     <input type="email" class="form-control" placeholder="Enter your email address..."/>

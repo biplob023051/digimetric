@@ -209,18 +209,6 @@
         return false;
     }
 </script>
-<style>
-    .error_signup{
-        border-color: rgb(235, 109, 82);
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(235, 109, 82, 0.6);
-        outline: 0 none;
-    }
-    .msg_err{
-        left: 15px;
-        position: absolute;
-        top: -25px;
-    }
-</style>
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -298,11 +286,11 @@ function validateEmail(email) {
     <?php echo $this->Form->create('User', array('url' => array('controller' => 'users', 'action' => 'ajax_signup'))); ?>
     <div class="modal-dialog mod_login_dialog">
         <div class="modal-content mod_login">
-            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_close.png"/></button>
             <div class="row">
                 <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;"> 
                     <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
-                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><i class="fa fa-lock fa-2x color_orange"></i></div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_lock.png"/></div>
                         <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Create a New Account</div>
                     </div>
                     <div class="col-md-12">
@@ -342,7 +330,7 @@ function validateEmail(email) {
                         <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
                     </div>
                     <div class="col-md-12">
-                        <input onclick="saveuser()" type="button" value="Sign Up" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit">
+                        <input onclick="saveuser()" type="button" value="Sign Up" class="sbt_S bg_orange bdr_rad" id="btn_submit">
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -358,12 +346,12 @@ function validateEmail(email) {
     <?php echo $this->Form->create('User', array('url' => array('controller' => 'users', 'action' => 'ajax_signin_candidate'))); ?>
     <div class="modal-dialog mod_login_dialog">
         <div class="modal-content mod_login">
-            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_close.png"/></button>
             <div class="row">
                 <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;">
                     <!-- BEGIN DEVICES -->
                     <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
-                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><i class="fa fa-edit fa-2x color_orange"></i></div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_edit.png"/></div>
                         <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Take a New Test</div>
                         <div class="clearfix"></div>
                     </div>
@@ -380,10 +368,10 @@ function validateEmail(email) {
                         <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
                     </div>
                     <div class="col-md-12">
-                        <input type="button" value="Take Test" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit" onclick="verfiycandidate();">
-                        <!--<input type="button" value="Take Test" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit" onclick="proceed();">-->
+                        <input type="button" value="Take Test" class="sbt_S bg_orange bdr_rad" id="btn_submit" onclick="verfiycandidate();">
+                        <!--<input type="button" value="Take Test" class="sbt_S bg_orange bdr_rad" id="btn_submit" onclick="proceed();">-->
                     </div>
-                    <div class="form_pae col-lg-12 fs_16">
+                    <div class="form_pae col-lg-12">
                         Note : Confirmation code will be valid for 10 different tries.
                     </div>
                     <div class="form_pae col-lg-12 sbt_ms">
@@ -401,12 +389,12 @@ function validateEmail(email) {
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog mod_login_dialog">
         <div class="modal-content mod_login">
-            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_close.png"/></button>
             <div class="row">
                 <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;">
                     <!-- BEGIN DEVICES -->
                     <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
-                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><i class="fa fa-user fa-2x color_orange"></i></div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_user.png"/></div>
                         <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Sign in to Digimetrik</div>
                     </div>
                     <div class="col-md-12">
@@ -415,14 +403,14 @@ function validateEmail(email) {
                     <div class="col-md-12">
                         <input type="password" name="email" id="password_login" class="form-control" placeholder="Password">
                     </div>
-                    <div class="processing_login_form">
-                        <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
-                    </div>
+                        <div class="processing_login_form form_pae">
+                            <img src="<?php echo BASEURL; ?>/images/loader-dark.gif"/> 
+                        </div>
                     <div class="col-md-12">
-                        <input type="submit" value="Sign In" class="sbt_S bg_orange fw_bold bdr_rad" id="btn_submit" onclick="loginuser();">
+                        <input type="submit" value="Sign In" class="sbt_S bg_orange bdr_rad" id="btn_submit" onclick="loginuser();">
                     </div>
                     <div class="form_pae col-lg-12">
-                        If you'd like an account for your organization, please 
+                        If you'd like an account for your organization,<br> please 
                         contact us to request more info
                     </div>
                     <div class="form_pae col-lg-12 sbt_ms">

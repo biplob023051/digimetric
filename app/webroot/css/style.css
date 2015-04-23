@@ -171,7 +171,7 @@ header#home {
     font-family: 'FuturaStd-CondensedBold'; }
 .par_blog{ font-family: 'FuturaStd-Book'; font-size:18px; text-align:justify; color:#000000;}
 .sbpar_blog{font-family: 'Futura'; font-size:18px; text-align:justify; color:#000000;}
-.form_pae{ font-family: 'Futura'; font-size:20px; text-align:center; color:#ffffff; margin:40px 0px;}
+.form_pae{ font-size:20px; text-align:center; color:#ffffff; margin:40px 0px;}
 .mauto{ margin:30px auto; display: block;
         float: none;}
 .mauto input { margin-bottom: 25px;}
@@ -179,7 +179,12 @@ header#home {
 .sbt_S:hover{ background-color:#de3008;}
 .sbt_ms{ font-size:14px; margin-top:0px; }
 .blogs .flex-control-paging li a{ display:none !important;}
-.sbt_ms a{ color:#0088cc ; text-decoration:none;}
+.sbt_ms a{
+color: #3fa9f5;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+}
 .sbt_ms a:hover{text-decoration:underline;}
 .blogss .flex-control-paging li a{ display:none;}
 .flexslider.blogss {
