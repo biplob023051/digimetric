@@ -55,7 +55,7 @@ ul,ol{list-style-type: none;}
 }
 #candidates_tab a{
     background-color: #ff8100;
-    border: 1px solid #ffffff;
+    border: 1px solid transparent;
 }
 #header_menu{
     background-color: #FFFFFF;
