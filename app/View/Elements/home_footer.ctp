@@ -5,11 +5,11 @@
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <h2 class="kapftr_title">Menu</h2>
                 <ul class="foot_qlink">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="<?php echo BASEURL ?>">Home</a></li>
+                    <li><a href="<?php echo BASEURL ?>/pages/how_it_works">How It Works</a></li>
+                    <li><a href="<?php echo BASEURL ?>/blogs">Blog</a></li>
+                    <li><a href="<?php echo BASEURL ?>/about">About</a></li>
+                    <li><a href="<?php echo BASEURL ?>/contact_us">Contact</a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3">
@@ -35,11 +35,11 @@
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <h2 class="kapftr_title">Keep In Touch</h2>
                 <ul class="foot_qlink foot_qlink_social">
-                    <li class="fb"><a href="#">Facebook</a></li>
-                    <li class="twt"><a href="#">Twitter</a></li>
-                    <li class="lin"><a href="#">LinkedIn</a></li>
-                    <li class="gplus"><a href="#">Google Plus</a></li>
-                    <li class="ytube"><a href="#">You Tube</a></li>
+                    <li class="fb"><a href="#" target="_blank">Facebook</a></li>
+                    <li class="twt"><a href="#" target="_blank">Twitter</a></li>
+                    <li class="lin"><a href="#" target="_blank">LinkedIn</a></li>
+                    <li class="gplus"><a href="#" target="_blank">Google Plus</a></li>
+                    <li class="ytube"><a href="#" target="_blank">You Tube</a></li>
                 </ul>
             </div>
         </div>
@@ -239,4 +239,17 @@
         });
         return false;
     }
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(document).on("click", "a.top_scroller", function(e) {
+            var id = $(this).attr("href");
+            if ($(id).length > 0) {
+                    e.preventDefault();
+                    $('html, body').animate({scrollTop: $(id).offset().top - 125}, 600);
+            }
+            $('.top_nav li').removeClass('active');
+            $(this).parent().addClass('active');
+        });
+    });
 </script>

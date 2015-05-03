@@ -45,6 +45,12 @@ class PagesController extends AppController {
      * @throws NotFoundException When the view file could not be found
      * 	or MissingViewException in debug mode.
      */
+    
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->layout;
+    }
+    
     public function home() {
         $this->set('all_locations', $this->getCountrys());
 //        debug();
@@ -68,7 +74,15 @@ class PagesController extends AppController {
         if (!empty($path[$count - 1])) {
             $title_for_layout = Inflector::humanize($path[$count - 1]);
         }
-        $this->set(compact('page', 'subpage', 'title_for_layout'));
+        
+        if ($path[0] == 'how_it_works') {
+            $layout = $this->layout = 'default';
+        } elseif ($path[0] == 'topics') {
+            $layout = $this->layout = 'topics_layout';
+        }                
+        //print_r($path);
+                
+        $this->set(compact('page', 'subpage', 'title_for_layout', 'layout'));
 
         try {
             $this->render(implode('/', $path));
@@ -80,8 +94,12 @@ class PagesController extends AppController {
         }
     }
 
-    public function home_video() {
-        
+    public function home_video() {}
+    
+    public function how_it_works() {}
+    
+    public function topics() {
+        //$this->layout = 'topics_layout';
     }
 
 }

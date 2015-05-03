@@ -96,8 +96,8 @@ class TestsController extends AppController {
         $this->set('areas', $this->getAreas());
         $this->set('difficulties', $this->getDifficulties());
 
-$this->set('categories', $this->getCategories());
-                $this->set('subcategories', $this->getSubCategories());
+        $this->set('categories', $this->getCategories());
+        $this->set('subcategories', $this->getSubCategories());
 
         $this->set('form_data', array('controller' => 'tests', 'action' => 'add_test', 'id' => '', 'display_text' => 'Add'));
 
@@ -123,7 +123,7 @@ $this->set('categories', $this->getCategories());
                     $this->Session->setFlash(__('Could not add test'));
                 }
             } else {
-                
+
 //                $this->set('categories', array());
 //                $this->set('subcategories', array());
                 $this->set('resultset', $this->request->data["Test"]);

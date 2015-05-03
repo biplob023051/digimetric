@@ -11,38 +11,40 @@ endif;
 App::uses('Debugger', 'Utility');
 ?>
 
-<div id="flex_area">
-    <section id="slide_flex">
-        <div class="flexslider">
-            <ul class="slides">   
-                <li class="text-center">
-                    <div class="container ghd ">
-                        <h1 class=" text-center bounceIn animated" data-delay="100">
-                            We connect your business with the best talent<br>
-                            in a fast and affordable way.
-                        </h1>
-                        <div class="clearfix"></div>
-                    </div>
-                    <a class="btn btn_orange btn_roll btn_hs" href="#" data-delay="100">Hire Smarter</a>
-                </li>
-                <li class="text-center">
-                    <div class="container ghd ">
-                        <h1 class=" text-center bounceIn animated" data-delay="100">
-                            We connect your business with the best talent<br>
-                            in a fast and affordable way.
-                        </h1>
-                        <div class="clearfix"></div>
-                    </div>
-                    <a class="btn btn_orange btn_roll btn_hs" data-delay="100" href="#">Hire Smarter</a>
-                </li>            
-            </ul>
-        </div>
-    </section>
-    <section id="slide_flex_bottom" class="bg_gray">
-        <div class="container text-center">
-            <span class="color_orange">Digimetrik:</span> Providing talent assessment for small and medium size businesses.
-        </div>
-    </section>
+<div id="home">
+    <div id="flex_area">
+        <section id="slide_flex">
+            <div class="flexslider">
+                <ul class="slides">   
+                    <li class="text-center">
+                        <div class="container ghd ">
+                            <h1 class=" text-center bounceIn animated" data-delay="100">
+                                We connect your business with the best talent<br>
+                                in a fast and affordable way.
+                            </h1>
+                            <div class="clearfix"></div>
+                        </div>
+                        <a class="btn btn_orange btn_roll btn_hs" href="#" data-delay="100">Hire Smarter</a>
+                    </li>
+                    <li class="text-center">
+                        <div class="container ghd ">
+                            <h1 class=" text-center bounceIn animated" data-delay="100">
+                                We connect your business with the best talent<br>
+                                in a fast and affordable way.
+                            </h1>
+                            <div class="clearfix"></div>
+                        </div>
+                        <a class="btn btn_orange btn_roll btn_hs" data-delay="100" href="#">Hire Smarter</a>
+                    </li>            
+                </ul>
+            </div>
+        </section>
+        <section id="slide_flex_bottom" class="bg_gray">
+            <div class="container text-center">
+                <span class="color_orange">Digimetrik:</span> Providing talent assessment for small and medium size businesses.
+            </div>
+        </section>
+    </div>
 </div>
 
 <!-- BEGIN EXPERIENCE SECTION -->
@@ -58,7 +60,7 @@ App::uses('Debugger', 'Utility');
                     <iframe width="100%" height="463" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/ujjjBdFFEmE?list=UU_ZYo8S9i9vc-6OJSzpSrSg&amp;rel=0"></iframe>
                 </div>
                 <div id="vid_shadow">
-                    <!--<img alt="" class="img-responsive" src="<?php //echo BASEURL;           ?>/img/vid_shadow.png"/>-->
+                    <!--<img alt="" class="img-responsive" src="<?php //echo BASEURL;            ?>/img/vid_shadow.png"/>-->
                 </div>
             </div>            
         </div>
@@ -101,7 +103,7 @@ App::uses('Debugger', 'Utility');
         </div>
     </section>
 
-    <section class=" bg_white" >
+    <section class=" bg_white" id="how_it_works">
         <div class="container ">
             <div class="text-center sec_text">
                 <h2 class="sec_heading">Our Assessment</h2>
@@ -111,19 +113,19 @@ App::uses('Debugger', 'Utility');
                     <img alt="Access Knowledge of Job Candidates" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/engineering.png"/>
                     <h2 class="kapftr_title text-center">Engineering</h2>
                     <p class="txt_hide">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore<br> et dolore magna aliqua.</p>
-                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                    <a href="<?php echo BASEURL ?>/pages/topics" class="kapftr_link_more">Learn More+</a>
                 </div>
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr text-center bounceIn animated" data-delay="200">
                     <img alt="Fast and Accurate" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/science.png"/>
                     <h2 class="kapftr_title text-center">Science</h2>
                     <p class="txt_hide">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt<br> ut labore et dolore.</p>
-                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                    <a href="<?php echo BASEURL ?>/pages/topics" class="kapftr_link_more">Learn More+</a>
                 </div>
                 <div class="col-sm-12 col-sm-4 col-md-4 kapftr kapftr_last text-center bounceIn animated" data-delay="300">
                     <img alt="Amazing Job" class="img-responsive auto_mrg" src="<?php echo BASEURL; ?>/img/tecnology.png"/>
                     <h2 class="kapftr_title text-center">Technology</h2>
                     <p class="txt_hide">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do<br> eiusmod tempor.</p>
-                    <a href="#" class="kapftr_link_more">Learn More+</a>
+                    <a href="<?php echo BASEURL ?>/pages/topics" class="kapftr_link_more">Learn More+</a>
                 </div>
             </div>
         </div>
@@ -161,7 +163,7 @@ App::uses('Debugger', 'Utility');
         </div>
     </section>
 
-    <section class=" bg_gray" >
+    <section class=" bg_gray" id="blogs">
         <div class="container ">            
             <div class="text-center sec_text">
                 <h2 class="sec_heading">From The Words Of Our Clients</h2>

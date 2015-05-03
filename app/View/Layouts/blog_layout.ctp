@@ -24,9 +24,12 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
             <?php echo $cakeDescription ?>:
             <?php echo $title_for_layout; ?>
         </title>
+        <link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,800,300,400,500' rel='stylesheet' type='text/css'>
         <?php
         echo $this->Html->meta('icon');
         echo $this->fetch('meta');
+        echo $this->Html->css('font-awesome.min.css');
+        echo $this->Html->css('bootstrap.css');
         echo $this->Html->css('rockox.css');
         echo $this->Html->css('animate.css');
         echo $this->Html->css('pie-charts-style.css');
@@ -37,20 +40,25 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
         echo $this->Html->css('jquery.selectBox.css');
         echo $this->Html->css('flexslider.css');
         echo $this->Html->css('responsive.css');
-//        echo $this->fetch('scsript');
-        ?>   
+        echo $this->Html->css('main.css');
+        echo $this->fetch('css');
+        ?>
+        <?php
+        echo $this->Html->script('jquery.js'); 
+        echo $this->Html->script('bootstrap.min.js');        
+        echo $this->fetch('scsript');
+        ?>
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]--> 
         <?php
         ?>
+        <?php echo $this->element('google_analytics'); ?>
     </head>
     <body>
-        <?php echo $this->element('google_analytics'); ?>
         <?php echo $this->element('home_header'); ?>
         <?php echo $this->Session->flash(); ?>
-
         <?php echo $this->fetch('content'); ?>
         <?php echo $this->element('home_footer'); ?>
         <?php //echo $this->element('sql_dump'); ?>

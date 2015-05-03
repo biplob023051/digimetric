@@ -335,7 +335,6 @@ function validateEmail(email) {
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <!-- END DEVICES --> 
         </div>
     </div>
     <?php echo $this->Form->end(); ?>
@@ -349,7 +348,6 @@ function validateEmail(email) {
             <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_close.png"/></button>
             <div class="row">
                 <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;">
-                    <!-- BEGIN DEVICES -->
                     <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
                         <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_edit.png"/></div>
                         <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Take a New Test</div>
@@ -380,7 +378,6 @@ function validateEmail(email) {
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <!-- END DEVICES --> 
         </div>
     </div>
     <?php echo $this->Form->end(); ?>
@@ -392,7 +389,6 @@ function validateEmail(email) {
             <button type="button" class="close mod_close" data-dismiss="modal" aria-hidden="true"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_close.png"/></button>
             <div class="row">
                 <div class="col-xs-11 col-md-9 col-md-9 text-center devices mauto" style="margin-bottom:5px;">
-                    <!-- BEGIN DEVICES -->
                     <div class="col-md-12 text-center devices mrg_btm_30 clearfix">
                         <div class="col-xs-1 col-sm-1 col-md-1 no_pad"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_user.png"/></div>
                         <div class="col-xs-11 col-sm-11 col-md-11 color_orange fs_20">Sign in to Digimetrik</div>
@@ -419,15 +415,13 @@ function validateEmail(email) {
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <!-- END DEVICES -->
         </div>
     </div>
     <div class="clear"></div>
 </div>
 
 <div id="wrapper">
-    <!-- BEGIN HEADER -->
-    <header id="home" class="navbar navbar-fixed-top">
+    <header id="home_header" class="navbar navbar-fixed-top">
         <div id="header_top">
             <div class="container clearfix">
                 <ul class="logs">
@@ -453,13 +447,21 @@ function validateEmail(email) {
                 </div>
                 <nav class="collapse navbar-collapse app-navbar-collapse" role="navigation"> 
                     <ul class="nav navbar-nav navbar-right top_nav">
-                        <li class="<?php echo ($this->params['controller'] == 'pages') ? 'active' : ''; ?>">
-                            <a id="home_page" href="<?php echo BASEURL; ?>">Home</a>
+                        <li <?php if($this->params['controller'] == 'pages' && $this->params['action'] == 'home') echo ' class="active"'; ?>>
+                            <a id="" href="<?php echo BASEURL; ?>">Home</a>
                         </li>
-                        <li><a id="hire_sm" href="<?php echo BASEURL; ?>#intel">How It Works</a></li>
-                        <li><a id="bloh_home" href="<?php echo BASEURL; ?>/blogs" class="<?php echo ($this->params['controller'] == 'blogs') ? 'active' : ''; ?>">Blog</a></li>
-                        <li><a id="about" href="<?php echo BASEURL; ?>/about" class="<?php echo ($this->params['controller'] == 'about') ? 'active' : ''; ?>">About</a></li>
-                        <li><a id="contact_us_home" href="<?php echo BASEURL; ?>/contact_us" class="<?php echo ($this->params['controller'] == 'contact_us') ? 'active' : ''; ?>">Contact</a></li>
+                        <li <?php if($this->params['controller'] == 'pages' && $this->params['action'] == 'display') echo ' class="active"'; ?>>
+                            <a id="" href="<?php echo BASEURL; ?>/pages/how_it_works">How It Works</a>
+                        </li>
+                        <li class="<?php echo ($this->params['controller'] == 'blogs') ? 'active' : ''; ?>">
+                            <a id="" href="<?php echo BASEURL; ?>/blogs">Blog</a>
+                        </li>
+                        <li class="<?php echo ($this->params['controller'] == 'about') ? 'active' : ''; ?>">
+                            <a id="about" href="<?php echo BASEURL; ?>/about">About</a>
+                        </li>
+                        <li class="<?php echo ($this->params['controller'] == 'contact_us') ? 'active' : ''; ?>">
+                            <a id="contact_us_home" href="<?php echo BASEURL; ?>/contact_us">Contact</a>
+                        </li>
                     </ul>
                 </nav>                
                 <div class="container clearfix"></div>
@@ -469,5 +471,4 @@ function validateEmail(email) {
                 </div>
             </div>
         </div> 
-    </header><!-- END HEADER -->
-<!-- BEGIN BANNER -->
+    </header>

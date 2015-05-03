@@ -35,6 +35,7 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
         echo $this->Html->css('pie-charts-style.css');
         echo $this->Html->css('jquery.fancybox8cbb.css?v=2.1.5');
         echo $this->Html->css('skin.css');
+        echo $this->Html->css('bootstrap.css');
         echo $this->Html->css('style.css');
         echo $this->Html->css('jquery.selectBox.css');
         echo $this->Html->css('flexslider.css');
@@ -43,7 +44,7 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
         echo $this->fetch('css');
         ?>
         <?php
-        echo $this->Html->script('jquery.js');        
+        echo $this->Html->script('jquery.js'); 
         echo $this->Html->script('bootstrap.min.js');        
         echo $this->fetch('scsript');
         ?>
@@ -55,22 +56,11 @@ $cakeDescription = __d('cake_dev', 'Digimetrik');
         ?>
         <?php echo $this->element('google_analytics'); ?>
     </head>
-    <body>        
-        <?php echo $this->element('home_header'); ?>
+    <body class="t_body">
+        <?php echo $this->element('topics_header'); ?>
         <?php echo $this->Session->flash(); ?>
         <?php echo $this->fetch('content'); ?>
         <?php echo $this->element('home_footer'); ?>
-        <?php // echo $this->element('sql_dump'); ?>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                getBodyTopPadding();
-            });
-            $(window).resize(function(){
-                getBodyTopPadding();
-            });
-            function getBodyTopPadding(){
-                return $("body").css('padding-top',$("#home_header").height());
-            }
-        </script>;
+        <?php //echo $this->element('sql_dump'); ?>
     </body>
 </html>
