@@ -12,6 +12,7 @@ App::uses('Debugger', 'Utility');
 ?>  
 <!-- END HEADER -->
 <!-- BEGIN BANNER -->
+<section id="slide_flex">
 <div class="flexslider blogu">
 
     <ul class="slides">   
@@ -34,7 +35,7 @@ App::uses('Debugger', 'Utility');
 
 
 </div>
-
+</section>
 <!--
 <a href="#experience" class="bot"><img src="img/bottom.png" alt="img"/></a>-->
 <div class="clearfix"></div>

@@ -108,7 +108,7 @@ ul,ol{list-style-type: none;}
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 500px;
+    min-height: 400px;
     padding-top: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -909,11 +909,28 @@ select#country a.selectBox.month.selectBox-dropdown{
 footer {
     border-top: 1px solid #ccc;
 }
+
+.more_infos{text-decoration: none;}
+.have{
+    /*font-family: inherit;*/
+}
+.have a:hover{color: #f26522;}
+
 /*=================================================== 
                     @Media Query Css
 ===================================================*/
 @media (max-width:1024px){
     .top_nav{margin-right: 100px !important;}
+}
+@media (max-width:800px){
+    .top_nav{
+        margin: 0 !important;
+        width: 100%;
+    }
+    .top_nav li a {
+        display: block;
+        padding: 10px 20px;
+    }
 }
 @media (max-width:768px){
     .top_nav{

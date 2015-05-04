@@ -101,27 +101,6 @@
 <script type="text/javascript" src="<?php echo BASEURL; ?>/js/share42/share42.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#hire_sm').on('click', function() {
-            $('#home_page').removeClass('active')
-            $('#contact_us_home').removeClass('active')
-            $('#bloh_home').removeClass('active')
-            $('#hire_sm').addClass('active')
-        });
-        var hash = window.location.hash;
-//        console.log(hash)
-//        alert(hash)
-        if (hash != '') {
-            if (hash == '#intel') {
-                $('#home_page').removeClass('active')
-                $('#contact_us_home').removeClass('active')
-                $('#bloh_home').removeClass('active')
-                $('#hire_sm').addClass('active')
-            }
-        }
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
 <?php if ($this->request->query['gm'] <> "" && $this->request->query['gm'] == "exists") { ?>
             alert("You have successfully signup as early user we will contact you soon");
 <?php } ?>
@@ -239,17 +218,4 @@
         });
         return false;
     }
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(document).on("click", "a.top_scroller", function(e) {
-            var id = $(this).attr("href");
-            if ($(id).length > 0) {
-                    e.preventDefault();
-                    $('html, body').animate({scrollTop: $(id).offset().top - 125}, 600);
-            }
-            $('.top_nav li').removeClass('active');
-            $(this).parent().addClass('active');
-        });
-    });
 </script>

@@ -20,13 +20,13 @@ display: block;}
 .moreinfo .close{ color:#000 !important ; float:right;margin: 0px; line-height: 13px;}
      </style>
 <div style="top:30%;left:20%" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+  <div class="modal-dialog modal-lg mod_login_dialog">
+    <div class="modal-content mod_login">
 <div class="col-lg-12 moreinfo" style="width:68%">
 <form name="contact_form_real" id="contact_form_real" method="post">
 <table width="100%">
 <tr>
-<td  colspan="2"><h1>Request More info </h1>  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></td>
+<td  colspan="2"><h1>Request More info </h1>  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img alt="x" src="<?php echo BASEURL; ?>/img/icon_close.png"/></button></td>
 </tr>
 <tr>
 <td><input type="text" name="data[User][first_name]" id="fname_contact" class="form-control" placeholder="First Name"></td>
@@ -47,6 +47,7 @@ display: block;}
 </div></div></div>
 
 <!-- BEGIN BANNER -->
+<section id="slide_flex">
                     <div class="flexslider blogu">
 
                         <ul class="slides">   
@@ -72,6 +73,7 @@ display: block;}
 
                     <div class="clearfix"></div>
                 </div>
+          </section>
             </header>
             
             <section class="no-padding-bottom experience" >
@@ -81,8 +83,9 @@ display: block;}
                     <a href="javascript:void(0)" class="more_infos col-sm-4  bounceIn" data-delay="400"  data-toggle="modal" data-target=".bs-example-modal-lg"
 					>REQUEST MORE INFO</a>
                     <div class="clear"></div>
-                    <a class="have  bounceIn" href="mailto:info@digimetrik.com" data-delay="500"> Have any questions ? Email us at 
-                        <strong>info@digimetrik.com</strong> and we'll get right back to you.</a>
+                    <div class="have">
+                     Have any questions &quest; Email us at <strong><a href="mailto:info@digimetrik.com">info@digimetrik.com</strong></a> and we&apos;ll get right back to you.
+                    </div>
 
                     <div class="pathu   bounceIn" data-delay="100">
                         <span>1407  Broadway, 24th Floor</span><br>
